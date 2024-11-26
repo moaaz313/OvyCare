@@ -91,7 +91,7 @@ Widget Body() {
             color: ColorStyle.white,
             image: DecorationImage(
                 image: AssetImage(
-                  'assets/image (2).png',
+                  'assets/image (3).png',
                 ),
                 fit: BoxFit.cover),
             borderRadius: BorderRadius.circular(15.r),
