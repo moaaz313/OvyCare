@@ -76,6 +76,8 @@ dependencies:
   #for icons
   font_awesome_flutter: ^10.8.0
   calendar_timeline: ^1.1.3
+  #to check if screen responsive and adaptive
+  device_preview: ^1.2.0
 
 dev_dependencies:
   flutter_test:

@@ -1,42 +1,8 @@
-import 'package:calendar_timeline/calendar_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 
-import '../../../../Core/themes/TextStyles/fontstyle.dart';
-import 'Widgets/Calendar_Widget.dart';
-import 'Widgets/Footer_Widget.dart';
-import 'Widgets/Header_Widget.dart';
-
-class HomepageView extends StatelessWidget {
-  const HomepageView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      // color: Colors.yellow,
-      padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
-      child: Column(
-        children: [
-          Header(),
-          SizedBox(
-            height: 15.h,
-          ),
-          Calendar(),
-          SizedBox(
-            height: 15.h,
-          ),
-          Body(),
-          SizedBox(
-            height: 15.h,
-          ),
-          Footer()
-        ],
-      ),
-    );
-  }
-}
-
+import '../../../../../Core/themes/Colors/ColorsStyle.dart';
+import '../../../../../Core/themes/TextStyles/fontstyle.dart';
 Widget Body() {
   return Column(
     children: [
@@ -64,7 +30,13 @@ Widget Body() {
                   fontWeight: FontWeight.bold,
                   fontSize:20.spMin),
             ),
-            // Text(' helping you gain insights into\n your reproductive health with a \ndetailed visual analysis'),
+            Text('Answer a series of questions\n to identify early signs of\nPolycystic Ovary Syndrome',textAlign:TextAlign.center,
+              style: TextStyle(
+                color:Colors.black54,
+                  fontWeight: FontWeight.bold,
+                  fontSize:12.spMin,
+              ),
+            ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: ColorStyle.pink,
@@ -91,7 +63,7 @@ Widget Body() {
             color: ColorStyle.white,
             image: DecorationImage(
                 image: AssetImage(
-                  'assets/image (3).png',
+                  'assets/image (2).png',
                 ),
                 fit: BoxFit.cover),
             borderRadius: BorderRadius.circular(15.r),
@@ -106,7 +78,13 @@ Widget Body() {
                   fontWeight: FontWeight.bold,
                   fontSize:20.spMin),
             ),
-            // Text(' helping you gain insights into\n your reproductive health with a \ndetailed visual analysis'),
+            Text('Upload an X-ray image to \n evaluate potential indicators\n of Polycystic Ovaries',textAlign:TextAlign.center,
+              style: TextStyle(
+                color:Colors.black54,
+                fontWeight: FontWeight.bold,
+                fontSize:12.spMin,
+              ),
+            ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: ColorStyle.pink,
