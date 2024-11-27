@@ -28,7 +28,6 @@ class _HomepageViewState extends State<HomeNaivebarView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       bottomNavigationBar: StylishBottomBar(
         option: AnimatedBarOptions(
           iconSize: 32,

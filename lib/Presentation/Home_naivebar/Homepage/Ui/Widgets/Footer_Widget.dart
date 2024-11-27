@@ -11,13 +11,13 @@ Widget Footer() {
         children: [
           Text(
             "Recommentation Doctor",
-            style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18.spMin, fontWeight: FontWeight.bold),
           ),
           Text(
             "See All",
             style: TextStyle(
-                color: Colors.blue,
-                fontSize: 15.sp,
+                color:ColorStyle.purple,
+                fontSize: 15.spMin,
                 fontWeight: FontWeight.w500),
           )
         ],

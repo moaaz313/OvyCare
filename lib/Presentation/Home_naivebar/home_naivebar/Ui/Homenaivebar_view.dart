@@ -6,6 +6,7 @@ import 'package:stylish_bottom_bar/stylish_bottom_bar.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
 import '../../Homepage/Ui/Homepage_view.dart';
+import '../../Tip_page/Ui/TipsView.dart';
 
 class HomeNaivebarView extends StatefulWidget {
   const HomeNaivebarView({super.key});
@@ -80,7 +81,7 @@ class _HomepageViewState extends State<HomeNaivebarView> {
           controller: controller,
           children: const [
             HomepageView(),
-            Center(child: Text('tips')),
+            TipsView(),
             Center(child: Text('Doctors')),
             Center(child: Text('Calander')),
             Center(child: Text('Profile')),

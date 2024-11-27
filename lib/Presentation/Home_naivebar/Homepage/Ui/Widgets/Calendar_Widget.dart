@@ -58,7 +58,7 @@ Widget Calendar() {
                 bottomLeft: Radius.circular(100.r),
                 bottomRight: Radius.circular(0.r),
                 topRight: Radius.circular(15.r)),
-            color: ColorStyle.accentPinkColor.withOpacity(0.4),
+            color: ColorStyle.Rose.withOpacity(0.4),
           ),
         ),
       ),
@@ -67,7 +67,7 @@ Widget Calendar() {
         child: Image.asset(
           'assets/calander1.png',
           fit: BoxFit.contain,
-          height: 130.h,
+          height: 140.h,
         ),
       ),
     ],

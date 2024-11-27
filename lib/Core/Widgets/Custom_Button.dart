@@ -16,14 +16,14 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: ontap,
-        child:Text(name,style: FontStyles.font16w600white,),
+        child:Text(name,style:TextStyle(fontSize: 14.spMin,color: Colors.white),),
       style: ElevatedButton.styleFrom(
-        fixedSize: Size(width??327.w,height??52.h),
-        padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 12.h),
+        minimumSize:  Size(64.w, 36.h),
+        maximumSize: Size.infinite,
+        // fixedSize: Size(width??327.w,height??52.h),
+        // padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 12.h),
         backgroundColor:BackgroundColor??ColorStyle.pink,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16.r),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.r))),
       )
     );
   }

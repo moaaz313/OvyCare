@@ -24,7 +24,7 @@ Widget Body() {
           children: [
             Spacer(),
             Text(
-              'PCOS Diagnostic',
+              'PCOS Assessment',
               style: TextStyle(
                   color: ColorStyle.purple,
                   fontWeight: FontWeight.bold,
@@ -72,13 +72,13 @@ Widget Body() {
           children: [
             Spacer(),
             Text(
-              'PCO Assessment',
+              'PCOD Diagnosis',
               style: TextStyle(
                   color: ColorStyle.purple,
                   fontWeight: FontWeight.bold,
                   fontSize:20.spMin),
             ),
-            Text('Upload an X-ray image to \n evaluate potential indicators\n of Polycystic Ovaries',textAlign:TextAlign.center,
+            Text('Upload an Ultrasound image to \n evaluate potential indicators\n of Polycystic Ovaries disease',textAlign:TextAlign.center,
               style: TextStyle(
                 color:Colors.black54,
                 fontWeight: FontWeight.bold,
@@ -91,7 +91,7 @@ Widget Body() {
                 ),
                 onPressed: () {},
                 child: Text(
-                  "Test PCO",
+                  "Test PCOD",
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 )),

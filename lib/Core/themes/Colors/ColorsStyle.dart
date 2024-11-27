@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ColorStyle{
-  static const Color pink = Color(0xffFF407D);
+  static const Color pink = Color(0xffCB577C);
   static const Color purple = Color(0xFF674188);
   static const Color darkgray = Color(0xFF757575);
   static const Color gray = Color(0xFFC2C2C2);
@@ -14,7 +14,7 @@ class ColorStyle{
   static const yellow=Color(0xffFFCC7B);
   static const orange=Color(0xffFF805D);
   static const Color accentPurpleColor = const Color(0xFF6A53A1);
-  static const Color accentPinkColor = const Color(0xFFF99BBD);
+  static const Color Rose = const Color(0xFFF9F4EE);
   static const Color accentYellowColor = const Color(0xFFFFB612);
   static const Color accentOrangeColor = const Color(0xFFEA7A3B);
   static const Color purplefav=const Color.fromRGBO(103, 0, 92, 4);  //68025D
