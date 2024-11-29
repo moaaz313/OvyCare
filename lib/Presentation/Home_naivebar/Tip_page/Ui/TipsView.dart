@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovacare/Core/Widgets/Custom_Button.dart';
-import 'package:ovacare/Core/themes/TextStyles/fontstyle.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
 
@@ -22,7 +21,8 @@ class TipsView extends StatelessWidget {
               padding: EdgeInsets.all(8.0.r),
               child: Text(
                 'Manage Polycystic Ovaries',
-                style: TextStyle(fontSize: 18.spMin, fontWeight: FontWeight.bold),
+                style:
+                    TextStyle(fontSize: 18.spMin, fontWeight: FontWeight.bold),
               ),
             ),
             PcoTips(),
@@ -33,7 +33,8 @@ class TipsView extends StatelessWidget {
               padding: EdgeInsets.all(8.0.r),
               child: Text(
                 'Healthy Eating Made Simple',
-                style: TextStyle(fontSize: 18.spMin, fontWeight: FontWeight.bold),
+                style:
+                    TextStyle(fontSize: 18.spMin, fontWeight: FontWeight.bold),
               ),
             ),
             HealthyTips(),
@@ -44,7 +45,8 @@ class TipsView extends StatelessWidget {
               padding: EdgeInsets.all(8.0.r),
               child: Text(
                 'Exercises for a Healthier You',
-                style: TextStyle(fontSize: 18.spMin, fontWeight: FontWeight.bold),
+                style:
+                    TextStyle(fontSize: 18.spMin, fontWeight: FontWeight.bold),
               ),
             ),
             ExerciseTips(),
@@ -54,8 +56,6 @@ class TipsView extends StatelessWidget {
     );
   }
 }
-
-
 
 Widget PcoTips() {
   return Container(
@@ -69,12 +69,11 @@ Widget PcoTips() {
             color: Colors.grey.withOpacity(0.4), // Shadow color with opacity
             spreadRadius: 5, // Spread radius
             blurRadius: 7, // Blur radius
-            offset: Offset(0, 3), // Offset in x and y direction
+            offset: const Offset(0, 3), // Offset in x and y direction
           ),
         ],
-        image: DecorationImage(
-            image: AssetImage('assets/background2.jpg'), fit: BoxFit.cover)
-    ),
+        image: const DecorationImage(
+            image: AssetImage('assets/background2.jpg'), fit: BoxFit.cover)),
     child: Stack(
       children: [
         // ClipRRect(
@@ -96,23 +95,23 @@ Widget PcoTips() {
         ),
         Padding(
           padding: EdgeInsets.all(10.0.r),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-            // Text(
-            //   'Manage Polycystic Ovaries',
-            //   style: FontStyles.font16w700black,
-            // ),
-            Text(
-              'Discover expert advice and lifestyle\nadjustments to help manage \nPCO symptoms and improve\nyour reproductive health.',
-              style:TextStyle(
-                color: Colors.black54,fontWeight: FontWeight.bold,
-                fontSize: 14.spMin
-              ),
-            ),
-            CustomButton(ontap: () {}, name: 'Learn More')
-          ]),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Text(
+                //   'Manage Polycystic Ovaries',
+                //   style: FontStyles.font16w700black,
+                // ),
+                Text(
+                  'Discover expert advice and lifestyle\nadjustments to help manage \nPCO symptoms and improve\nyour reproductive health.',
+                  style: TextStyle(
+                      color: Colors.black54,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14.spMin),
+                ),
+                CustomButton(ontap: () {}, name: 'Learn More')
+              ]),
         ),
       ],
     ),
@@ -125,14 +124,14 @@ Widget HealthyTips() {
     width: double.infinity,
     padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
     decoration: BoxDecoration(
-      color: ColorStyle.Rose,
+      color: ColorStyle.rose,
       borderRadius: BorderRadius.circular(15.r),
       boxShadow: [
         BoxShadow(
           color: Colors.grey.withOpacity(0.4), // Shadow color with opacity
           spreadRadius: 5, // Spread radius
           blurRadius: 7, // Blur radius
-          offset: Offset(0, 3), // Offset in x and y direction
+          offset: const Offset(0, 3), // Offset in x and y direction
         ),
       ],
     ),
@@ -140,12 +139,12 @@ Widget HealthyTips() {
       children: [
         Row(
           children: [
-            Spacer(),
+            const Spacer(),
             Container(
               width: 140.w,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.r),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                       image: AssetImage('assets/food.png'), fit: BoxFit.cover)),
               // child: Image.asset('assets/food.jpg',fit: BoxFit.cover,)
             ),
@@ -153,25 +152,26 @@ Widget HealthyTips() {
         ),
         Row(
           children: [
-            Column(crossAxisAlignment: CrossAxisAlignment.start,
+            Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-              // Text(
-              //   'Healthy Eating Made Simple',
-              //   style: FontStyles.font16w700black,
-              // ),
-              Text(
-                'Explore delicious and nutritious\nmeal ideas to support hormonal\nbalance and overall well-being.',
-                style: TextStyle(
-                    color: Colors.black54,fontWeight: FontWeight.bold,
-                    fontSize: 14.spMin
-                ),
-              ),
-              SizedBox(
-                height: 5.h,
-              ),
-              CustomButton(name: "Explore Recipes", ontap: () {})
-            ]),
+                  // Text(
+                  //   'Healthy Eating Made Simple',
+                  //   style: FontStyles.font16w700black,
+                  // ),
+                  Text(
+                    'Explore delicious and nutritious\nmeal ideas to support hormonal\nbalance and overall well-being.',
+                    style: TextStyle(
+                        color: Colors.black54,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14.spMin),
+                  ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  CustomButton(name: "Explore Recipes", ontap: () {})
+                ]),
             // Spacer(),
           ],
         ),
@@ -192,10 +192,10 @@ Widget ExerciseTips() {
             color: Colors.grey.withOpacity(0.4), // Shadow color with opacity
             spreadRadius: 5, // Spread radius
             blurRadius: 7, // Blur radius
-            offset: Offset(0, 3), // Offset in x and y direction
+            offset: const Offset(0, 3), // Offset in x and y direction
           ),
         ],
-        image: DecorationImage(
+        image: const DecorationImage(
             image: AssetImage('assets/fitness.jpg'), fit: BoxFit.cover)),
     child: Stack(
       children: [
@@ -219,23 +219,23 @@ Widget ExerciseTips() {
         // ),
         Padding(
           padding: EdgeInsets.all(10.0.r),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-            // Text(
-            //   'Exercises for a Healthier You',
-            //   style: FontStyles.font16w700black,
-            // ),
-            Text(
-              'Find workouts tailored to enhance\n your fitness and reduce symptoms\n associated with PCO and PCOS.',
-              style: TextStyle(
-                  color: Colors.black54,fontWeight: FontWeight.bold,
-                  fontSize: 14.spMin
-              ),
-            ),
-            CustomButton(ontap: () {}, name: 'Start Exercising')
-          ]),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Text(
+                //   'Exercises for a Healthier You',
+                //   style: FontStyles.font16w700black,
+                // ),
+                Text(
+                  'Find workouts tailored to enhance\n your fitness and reduce symptoms\n associated with PCO and PCOS.',
+                  style: TextStyle(
+                      color: Colors.black54,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14.spMin),
+                ),
+                CustomButton(ontap: () {}, name: 'Start Exercising')
+              ]),
         ),
       ],
     ),

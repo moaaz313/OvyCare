@@ -8,16 +8,16 @@ class ColorStyle{
   static const Color lightgray = Color(0xFFEDEDED);
   static const Color white = Color(0xFFFFFFFF);
   static const Color lightwhite = Color(0xFFF9FAFB);
-  static const Color Black = Color(0xFF000000);
+  static const Color black = Color(0xFF000000);
 
   static const darkpurple=Color(0xff452B4E);
   static const yellow=Color(0xffFFCC7B);
   static const orange=Color(0xffFF805D);
-  static const Color accentPurpleColor = const Color(0xFF6A53A1);
-  static const Color Rose = const Color(0xFFF9F4EE);
-  static const Color accentYellowColor = const Color(0xFFFFB612);
-  static const Color accentOrangeColor = const Color(0xFFEA7A3B);
-  static const Color purplefav=const Color.fromRGBO(103, 0, 92, 4);  //68025D
+  static const Color accentPurpleColor =  Color(0xFF6A53A1);
+  static const Color rose =  Color(0xFFF9F4EE);
+  static const Color accentYellowColor =  Color(0xFFFFB612);
+  static const Color accentOrangeColor =  Color(0xFFEA7A3B);
+  static const Color purplefav= Color.fromRGBO(103, 0, 92, 4);  //68025D
 
 
 }

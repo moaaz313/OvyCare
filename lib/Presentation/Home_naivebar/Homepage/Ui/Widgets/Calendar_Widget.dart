@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../Core/themes/Colors/ColorsStyle.dart';
-import '../../../../../Core/themes/TextStyles/fontstyle.dart';
+
 Widget Calendar() {
   return Stack(
     children: [
@@ -10,7 +10,8 @@ Widget Calendar() {
           height: 150.h,
           width: double.infinity,
           decoration: BoxDecoration(
-              color: ColorStyle.purple, borderRadius: BorderRadius.circular(15.r)),
+              color: ColorStyle.purple,
+              borderRadius: BorderRadius.circular(15.r)),
           child: Row(children: [
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
@@ -20,7 +21,7 @@ Widget Calendar() {
                   SizedBox(
                     height: 20.h,
                   ),
-                  Text(
+                  const Text(
                     "Period in.",
                     style: TextStyle(
                         color: Colors.white,
@@ -34,21 +35,24 @@ Widget Calendar() {
                         fontWeight: FontWeight.bold,
                         fontSize: 40.spMin),
                   ),
-                  Spacer(),
-                  Text('Stay prepared and plan ahead!',
+                  const Spacer(),
+                  Text(
+                    'Stay prepared and plan ahead!',
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
                         fontSize: 13.sp),
                   ),
-                  SizedBox(height: 10.h,),
+                  SizedBox(
+                    height: 10.h,
+                  ),
                 ],
               ),
             ),
-            Spacer()
+            const Spacer()
           ])),
       Align(
-        alignment:Alignment.topRight ,
+        alignment: Alignment.topRight,
         child: Container(
           alignment: Alignment.topRight,
           width: 150.w,
@@ -58,7 +62,7 @@ Widget Calendar() {
                 bottomLeft: Radius.circular(100.r),
                 bottomRight: Radius.circular(0.r),
                 topRight: Radius.circular(15.r)),
-            color: ColorStyle.Rose.withOpacity(0.4),
+            color: ColorStyle.rose.withOpacity(0.4),
           ),
         ),
       ),

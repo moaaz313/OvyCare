@@ -7,13 +7,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:ovacare/main.dart';
+import 'package:ovacare/Core/Routing/app_routes.dart';
+import 'package:ovacare/ova_care.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(OvaCare(appRouter: AppRoutes()));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
