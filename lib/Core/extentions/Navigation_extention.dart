@@ -6,8 +6,6 @@ extension NavigationExtention on BuildContext {
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);
   }
-
-
   void pop() {
     Navigator.of(this).pop();
   }

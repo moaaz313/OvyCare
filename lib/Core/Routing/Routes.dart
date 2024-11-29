@@ -1,7 +1,7 @@
-class Routes{
+ class Routes{
   static const String login = '/login';
   static const String home = '/home';
   static const String payment = '/payment';
-  static const String RecommedDoc = '/RecommedDoc';
+  static const String recommedDoc = '/recommedDoc';
   static const String loginView = '/loginView';
 }

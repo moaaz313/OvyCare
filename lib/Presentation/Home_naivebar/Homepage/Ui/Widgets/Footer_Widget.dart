@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../Core/themes/Colors/ColorsStyle.dart';
-import '../../../../../Core/themes/TextStyles/fontstyle.dart';
 Widget Footer() {
   return Column(
     children: [

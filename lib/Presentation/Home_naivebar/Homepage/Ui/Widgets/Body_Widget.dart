@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../Core/themes/Colors/ColorsStyle.dart';
-import '../../../../../Core/themes/TextStyles/fontstyle.dart';
 Widget Body() {
   return Column(
     children: [
@@ -13,7 +12,7 @@ Widget Body() {
         alignment: Alignment.centerRight,
         decoration: BoxDecoration(
             color: ColorStyle.white,
-            image: DecorationImage(
+            image: const DecorationImage(
                 image: AssetImage(
                   'assets/image (1).png',
                 ),
@@ -22,7 +21,7 @@ Widget Body() {
             border: Border.all(color: ColorStyle.purple, width: 2.w)),
         child: Column(
           children: [
-            Spacer(),
+            const Spacer(),
             Text(
               'PCOS Assessment',
               style: TextStyle(
@@ -42,12 +41,12 @@ Widget Body() {
                   backgroundColor: ColorStyle.pink,
                 ),
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Test PCOS",
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 )),
-            Spacer(),
+            const Spacer(),
           ],
         ),
       ),
@@ -61,7 +60,7 @@ Widget Body() {
         alignment: Alignment.centerRight,
         decoration: BoxDecoration(
             color: ColorStyle.white,
-            image: DecorationImage(
+            image: const DecorationImage(
                 image: AssetImage(
                   'assets/image (2).png',
                 ),
@@ -70,7 +69,7 @@ Widget Body() {
             border: Border.all(color: ColorStyle.purple, width: 2.w)),
         child: Column(
           children: [
-            Spacer(),
+            const Spacer(),
             Text(
               'PCOD Diagnosis',
               style: TextStyle(
@@ -90,12 +89,12 @@ Widget Body() {
                   backgroundColor: ColorStyle.pink,
                 ),
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Test PCOD",
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 )),
-            Spacer(),
+            const Spacer(),
           ],
         ),
       ),

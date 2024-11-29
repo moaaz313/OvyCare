@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:stylish_bottom_bar/helpers/enums.dart';
 import 'package:stylish_bottom_bar/stylish_bottom_bar.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
 import '../../Homepage/Ui/Homepage_view.dart';
 import '../../Tip_page/Ui/TipsView.dart';
+import '../../doctor/ui/doctor_screen.dart';
 
 class HomeNaivebarView extends StatefulWidget {
   const HomeNaivebarView({super.key});
@@ -38,29 +37,38 @@ class _HomepageViewState extends State<HomeNaivebarView> {
         ),
         items: [
           BottomBarItem(
-            icon: const Icon(FontAwesomeIcons.house, size:20),
+            icon: const Icon(FontAwesomeIcons.house, size: 20),
             title: const Text('Home'),
             // backgroundColor: Colors.black,
-            selectedColor: ColorStyle.pink,            // selectedIcon: const Icon(Icons.read_more),
+            selectedColor:
+                ColorStyle.pink, // selectedIcon: const Icon(Icons.read_more),
           ),
           BottomBarItem(
-            icon: const Icon(FontAwesomeIcons.lightbulb, size:28),
+            icon: const Icon(FontAwesomeIcons.lightbulb, size: 28),
             title: const Text('Tips'),
             // backgroundColor: Colors.black,
-            selectedColor: ColorStyle.pink,          ),
+            selectedColor: ColorStyle.pink,
+          ),
           BottomBarItem(
-            icon: const Icon(FontAwesomeIcons.calendarDay, size:24),
+            icon: const Icon(FontAwesomeIcons.calendarDay, size: 24),
             title: const Text('Calendar'),
             // backgroundColor: Colors.black,
             selectedColor: ColorStyle.pink,
           ),
           BottomBarItem(
-            icon: const Icon(FontAwesomeIcons.userDoctor, size:25,),
+            icon: const Icon(
+              FontAwesomeIcons.userDoctor,
+              size: 25,
+            ),
             title: const Text('Doctors'),
             // backgroundColor: Colors.black,
             selectedColor: ColorStyle.pink,
-          ), BottomBarItem(
-            icon: const Icon(Icons.person, size:28,),
+          ),
+          BottomBarItem(
+            icon: const Icon(
+              Icons.person,
+              size: 28,
+            ),
             title: const Text('Profile'),
             // backgroundColor: Colors.black,
             selectedColor: ColorStyle.pink,
@@ -82,8 +90,8 @@ class _HomepageViewState extends State<HomeNaivebarView> {
           children: const [
             HomepageView(),
             TipsView(),
-            Center(child: Text('Doctors')),
             Center(child: Text('Calander')),
+            DoctorScreen(),
             Center(child: Text('Profile')),
           ],
         ),
