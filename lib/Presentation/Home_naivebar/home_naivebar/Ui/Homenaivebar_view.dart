@@ -4,6 +4,7 @@ import 'package:stylish_bottom_bar/stylish_bottom_bar.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
 import '../../Homepage/Ui/Homepage_view.dart';
+import '../../Settings/SubPages/Edit_Profile/ui/EditProfileView.dart';
 import '../../Tip_page/Ui/TipsView.dart';
 import '../../doctor/ui/doctor_screen.dart';
 
@@ -66,10 +67,10 @@ class _HomepageViewState extends State<HomeNaivebarView> {
           ),
           BottomBarItem(
             icon: const Icon(
-              Icons.person,
+              Icons.settings,
               size: 28,
             ),
-            title: const Text('Profile'),
+            title: const Text('Settings'),
             // backgroundColor: Colors.black,
             selectedColor: ColorStyle.pink,
           ),
@@ -92,7 +93,7 @@ class _HomepageViewState extends State<HomeNaivebarView> {
             TipsView(),
             Center(child: Text('Calander')),
             DoctorScreen(),
-            Center(child: Text('Profile')),
+            edit_profile()
           ],
         ),
       ),

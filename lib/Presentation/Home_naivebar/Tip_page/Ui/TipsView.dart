@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovacare/Core/Widgets/Custom_Button.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
+import '../SubPages/healthyfoodPage/Ui/TipsView.dart';
 
 class TipsView extends StatelessWidget {
   const TipsView({super.key});
@@ -37,7 +38,7 @@ class TipsView extends StatelessWidget {
                     TextStyle(fontSize: 18.spMin, fontWeight: FontWeight.bold),
               ),
             ),
-            HealthyTips(),
+            HealthyTips(context),
             SizedBox(
               height: 10.h,
             ),
@@ -118,7 +119,7 @@ Widget PcoTips() {
   );
 }
 
-Widget HealthyTips() {
+Widget HealthyTips(context) {
   return Container(
     height: 150.h,
     width: double.infinity,
@@ -170,7 +171,9 @@ Widget HealthyTips() {
                   SizedBox(
                     height: 5.h,
                   ),
-                  CustomButton(name: "Explore Recipes", ontap: () {})
+                  CustomButton(name: "Explore Recipes", ontap: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => FoodTipsView(),));
+                  })
                 ]),
             // Spacer(),
           ],

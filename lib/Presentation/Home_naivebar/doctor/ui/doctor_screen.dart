@@ -4,6 +4,7 @@ import 'package:ovacare/Presentation/Home_naivebar/doctor/ui/widgets/doctor.dart
 import '../../../../Core/Widgets/custom_app_bar.dart';
 import 'widgets/doctor_list.dart';
 import 'widgets/search_doctor_bar.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DoctorScreen extends StatelessWidget {
   const DoctorScreen({super.key});
@@ -40,13 +41,16 @@ class DoctorScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+          padding:  EdgeInsets.symmetric(vertical:20.h, horizontal: 20.w),
           child: Column(
             children: [
               const CustomAppBar(
                 text: " Recommendation Doctor",
               ),
-              const SearchDoctorBar(),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: const SearchDoctorBar(),
+              ),
               Expanded(
                 child: DoctorList(
                   doctors: doctors,

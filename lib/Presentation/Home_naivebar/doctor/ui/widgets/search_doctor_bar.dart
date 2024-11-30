@@ -10,6 +10,7 @@ class SearchDoctorBar extends StatelessWidget {
       children: [
         Expanded(
           child: TextField(
+            onTapOutside: (event) =>FocusManager.instance.primaryFocus?.unfocus(),
             decoration: InputDecoration(
               hintText: 'Search',
               prefixIcon: Icon(Icons.search, size: 24.sp),

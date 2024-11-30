@@ -12,7 +12,7 @@ class DoctorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       color: ColorStyle.white,
-      margin: EdgeInsets.symmetric(vertical: 12.h),
+      margin: EdgeInsets.symmetric(vertical:6.h),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16.r),
       ),

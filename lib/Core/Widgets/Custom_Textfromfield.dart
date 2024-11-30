@@ -8,14 +8,14 @@ class CustomTextfromfield extends StatelessWidget {
   final String hintText;
   final bool isObscure;
   final TextEditingController Controller;
-  final Widget? suffixIcon;
+  final Widget? prefixIcon;
 
   CustomTextfromfield({
     Key? key,
     required this.hintText,
     this.isObscure = false, // Default value for isObscure
     required this.Controller,
-    this.suffixIcon,
+    this.prefixIcon,
   }) : super(key: key);
 
   String? _validateInput(String? value) {
@@ -49,9 +49,10 @@ class CustomTextfromfield extends StatelessWidget {
       },
       validator: _validateInput,
       decoration: InputDecoration(
+        // prefixIcon: Icon??null,
         filled: true,
         fillColor: const Color(0xffFDFDFF),
-        contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 17.h),
+        contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 15.h),
         hintText: hintText,
         hintStyle: FontStyles.font14w500gray,
         enabledBorder: OutlineInputBorder(
@@ -66,7 +67,7 @@ class CustomTextfromfield extends StatelessWidget {
           borderSide: BorderSide(color: ColorStyle.lightgray, width: 1.5.w),
           borderRadius: BorderRadius.all(Radius.circular(16.r)),
         ),
-        suffixIcon: suffixIcon,
+        prefixIcon: prefixIcon,
         isDense: true,
       ),
     );

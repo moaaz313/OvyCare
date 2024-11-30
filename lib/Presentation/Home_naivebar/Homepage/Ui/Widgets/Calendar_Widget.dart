@@ -10,7 +10,7 @@ Widget Calendar() {
           height: 150.h,
           width: double.infinity,
           decoration: BoxDecoration(
-              color: ColorStyle.purple,
+              color: ColorStyle.purplefav,
               borderRadius: BorderRadius.circular(15.r)),
           child: Row(children: [
             Container(
