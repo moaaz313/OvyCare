@@ -7,6 +7,7 @@ class CustomButton extends StatelessWidget {
   final String name;
   final double? width;
   final double? height;
+  final double? FontSize;
   final void Function()? ontap;
   final Color? backgroundColor;
   const CustomButton(
@@ -15,6 +16,7 @@ class CustomButton extends StatelessWidget {
       required this.ontap,
       this.backgroundColor,
       this.width,
+      this.FontSize,
       this.height});
 
   @override
@@ -23,12 +25,12 @@ class CustomButton extends StatelessWidget {
         onPressed: ontap,
         child: Text(
           name,
-          style: TextStyle(fontSize: 14.spMin, color: Colors.white),
+          style: TextStyle(fontSize: FontSize?.spMin, color: Colors.white),
         ),
         style: ElevatedButton.styleFrom(
-          minimumSize: Size(64.w, 36.h),
+          minimumSize: Size(width??64.w,height?? 36.h),
           maximumSize: Size.infinite,
-          // fixedSize: Size(width??327.w,height??52.h),
+          // fixedSize: Size(width??64.w,height??36.h),
           // padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 12.h),
           backgroundColor: backgroundColor ?? ColorStyle.pink,
           shape: RoundedRectangleBorder(

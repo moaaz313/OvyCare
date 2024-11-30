@@ -12,6 +12,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:full_screen_image/full_screen_image.dart';
 import 'package:get/get_utils/src/get_utils/get_utils.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:ovacare/Core/Widgets/Custom_Button.dart';
 import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 import 'package:path/path.dart';
 import 'package:provider/provider.dart';
@@ -177,10 +178,11 @@ List icons = [
                   bottom: MediaQuery.of(context).viewInsets.bottom + 5,
                 ),
                 child: Container(
-                  padding: const EdgeInsets.fromLTRB(20, 5, 20, 0),
-                  margin: const EdgeInsets.fromLTRB(20, 190, 20, 0),
+                  // padding:  EdgeInsets.fromLTRB(20.w, 5.h, 20.w,25.h),
+                  // margin:  EdgeInsets.fromLTRB(20.w, 140.h, 20.w, 0),
+                  margin:  EdgeInsets.fromLTRB(20.w, 170.h, 20.w, 0),
                   decoration: const BoxDecoration(
-                    color: Colors.transparent,
+                    // color: ColorStyle.lightgray,
                   ),
                   child: Form(
                     key: _formKey,
@@ -194,32 +196,32 @@ List icons = [
                               Text(
                                 "    Hello..",
                                 style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 20.spMin,
                                   fontWeight: FontWeight.bold,
                                   color:  Colors.black,
                                 ),
                               ),
                               Text(
-                                " dd",
+                                " Dohaa Aymann",
                                 style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 20.spMin,
                                   fontWeight: FontWeight.bold,
-                                  color:  Color(0xff2393FF)
+                                  color: ColorStyle.purplefav
                                 ),
                               ),
                             ],
                           ),
                         ),
-                        const SizedBox(height: 40),
+                         SizedBox(height:20.h),
                         for (int i = 0; i < fieldsName.length; i++)
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 fieldsName[i],
-                                style: const TextStyle(
+                                style:  TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 20,
+                                  fontSize: 20.spMin,
                                   color: Colors.grey,
                                 ),
                               ),
@@ -273,63 +275,68 @@ List icons = [
                               //     ),
                               //   ),
                               // ),
-                              const SizedBox(height: 15),
+                               SizedBox(height: 15.h),
                             ],
-                          ),
+                          ),CustomButton(name: 'Save', ontap: (){},width: 220.w,height: 40.h,FontSize: 22,),
+                        SizedBox(height: 15.h),
                       ],
                     ),
+
                   ),
                 ),
               );
             },
           ),
           Container(
+            height: 135.h,
+            width: 150.w,
             decoration: BoxDecoration(
               color:ColorStyle.purplefav,
-              borderRadius: BorderRadius.circular(100),
+              borderRadius: BorderRadius.circular(100.r),
             ),
-            margin: const EdgeInsets.only(top: 80, left: 15),
+            margin:  EdgeInsets.only(top: 80.h, left: 15.w),
             child: Stack(
               alignment: Alignment.center,
               children: [
                 CircleAvatar(
-                  radius: 80,
-                  backgroundImage:AssetImage('assets/food.png'),
-                  // selectedImage == null?
-                  //     NetworkImage('photo'),
-                      // : FileImage(selectedImage!) as ImageProvider,
-                  child: FullScreenWidget(
-                    disposeLevel: DisposeLevel.High,
-                    child: Hero(
-                      transitionOnUserGestures: true,
-                      tag: "s",
-                      child: Container(
-                        width: 160,
-                        height: 160,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage('assets/food.png'),
-                            // selectedImage == null
-                            //     ? NetworkImage(photo)
-                            //     : FileImage(selectedImage!) as ImageProvider,
-                            fit: BoxFit.cover,
-                          ),
+                radius:70.r,
+                backgroundImage:AssetImage('assets/food.png'),
+                // selectedImage == null?
+                //     NetworkImage('photo'),
+                // : FileImage(selectedImage!) as ImageProvider,
+                child: FullScreenWidget(
+                  disposeLevel: DisposeLevel.High,
+                  child: Hero(
+                    transitionOnUserGestures: true,
+                    tag: "s",
+                    child: Container(
+                      // width: 160.w,
+                      // height: 160.h,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: AssetImage('assets/food.png'),
+                          // selectedImage == null
+                          //     ? NetworkImage(photo)
+                          //     : FileImage(selectedImage!) as ImageProvider,
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
                   ),
                 ),
+              ),
                 Container(
-                  margin: const EdgeInsets.fromLTRB(110, 120, 20, 0),
+                  // margin:  EdgeInsets.fromLTRB(50.w, 50.h, 0, 0),
+                  alignment: Alignment.bottomRight,
                   child: CircleAvatar(
-                    backgroundColor: Colors.grey,
-                    radius: 20,
+                    backgroundColor: ColorStyle.gray,
+                    radius: 20.r,
                     child: IconButton(
                       onPressed: () {
                         _pickImageFromGallery();
                       },
-                      icon: const Icon(CupertinoIcons.camera_fill, size: 18),
+                      icon:  Icon(CupertinoIcons.camera_fill, size: 16.h),
                     ),
                   ),
                 ),
@@ -337,7 +344,8 @@ List icons = [
             ),
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 60),
+            margin: EdgeInsets.only(bottom: 60.h),
+            // child: CustomButton(name: 'Save', ontap: (){}),
             // child: Align(
             //   alignment: Alignment.bottomCenter,
             //   child: !waitt
@@ -374,7 +382,7 @@ List icons = [
             // ),
           ),
           Container(
-            margin: const EdgeInsets.fromLTRB(10, 30, 10, 10),
+            margin:  EdgeInsets.fromLTRB(10.w, 30.h, 10.w, 10.h),
             child: Column(
               children: [
                 Row(
@@ -385,14 +393,14 @@ List icons = [
                       },
                       icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                     ),
-                    const SizedBox(width: 100),
-                    const Text(
+                     SizedBox(width: 100.w),
+                     Text(
                       "Edit Profile",
-                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
+                      style: TextStyle(fontSize: 22.spMin, fontWeight: FontWeight.bold, color: Colors.white),
                     ),
                   ],
                 ),
-                const SizedBox(height: 30),
+                 SizedBox(height: 30.h),
               ],
             ),
           ),
