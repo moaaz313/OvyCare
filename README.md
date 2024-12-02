@@ -1,2 +1,1 @@
-Doctor Screen ✅
-![assets/images/doctor_screen.png](assets/doctor_screen_screenshot.png)
+OvaCare is an innovative healthcare application designed to support women's health by leveraging AI technology for early detection of PCOS (Polycystic Ovary Syndrome) and PCO (Polycystic Ovaries). The app empowers users with personalized tools such as menstrual cycle tracking, health tips, and a recommendation system to connect with specialized doctors. With an intuitive UI built using Flutter, OvaCare provides seamless navigation for uploading diagnostic images, answering health-related questionnaires, and receiving tailored lifestyle advice, making women's health management accessible and user-friendly.
