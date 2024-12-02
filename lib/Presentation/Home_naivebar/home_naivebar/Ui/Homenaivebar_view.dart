@@ -5,6 +5,7 @@ import 'package:stylish_bottom_bar/stylish_bottom_bar.dart';
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
 import '../../Homepage/Ui/Homepage_view.dart';
 import '../../Settings/SubPages/Edit_Profile/ui/EditProfileView.dart';
+import '../../Settings/ui/Settings_View.dart';
 import '../../Tip_page/Ui/TipsView.dart';
 import '../../doctor/ui/doctor_screen.dart';
 
@@ -88,12 +89,12 @@ class _HomepageViewState extends State<HomeNaivebarView> {
       body: SafeArea(
         child: PageView(
           controller: controller,
-          children: const [
+          children:  [
             HomepageView(),
             TipsView(),
-            Center(child: Text('Calander')),
+            edit_profile(),
             DoctorScreen(),
-            edit_profile()
+            SettingsView()
           ],
         ),
       ),

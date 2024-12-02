@@ -84,6 +84,7 @@ dependencies:
   flutter_custom_clippers: ^2.1.0
   full_screen_image: ^2.0.0
   date_picker_textfield: ^1.0.4
+  expandable: ^5.0.1
 #  date_time_field: ^0.0.2
 
 dev_dependencies:

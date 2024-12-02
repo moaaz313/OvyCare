@@ -170,7 +170,6 @@ List icons = [
               ),
             ),
           ),
-          SizedBox(height: 50.h,),
           LayoutBuilder(
             builder: (context, constraints) {
               return SingleChildScrollView(

@@ -172,7 +172,7 @@ Widget HealthyTips(context) {
                     height: 5.h,
                   ),
                   CustomButton(name: "Explore Recipes", ontap: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => FoodTipsView(),));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => HealthyEatingPage(),));
                   })
                 ]),
             // Spacer(),
