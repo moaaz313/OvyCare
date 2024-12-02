@@ -151,14 +151,15 @@ List icons = [
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
-                color:ColorStyle.lightwhite
+                color:ColorStyle.lightwhite,
+
               ),
             ),
           ),
           ClipPath(
             clipper: OvalBottomBorderClipper(),
             child: Container(
-              height:120.h,
+              height:180.h,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -170,6 +171,7 @@ List icons = [
               ),
             ),
           ),
+          SizedBox(height: 50.h,),
           LayoutBuilder(
             builder: (context, constraints) {
               return SingleChildScrollView(
@@ -177,172 +179,189 @@ List icons = [
                 padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context).viewInsets.bottom + 5,
                 ),
-                child: Container(
-                  // padding:  EdgeInsets.fromLTRB(20.w, 5.h, 20.w,25.h),
-                  // margin:  EdgeInsets.fromLTRB(20.w, 140.h, 20.w, 0),
-                  margin:  EdgeInsets.fromLTRB(20.w, 190.h, 20.w, 0),
-                  decoration: const BoxDecoration(
-                    // color: ColorStyle.lightgray,
-                  ),
-                  child: Form(
-                    key: _formKey,
-                    child: Column(
-                      children: [
-                        // Align(
-                        //   alignment: Alignment.topRight,
-                        //   child: Column(
-                        //     crossAxisAlignment: CrossAxisAlignment.start,
-                        //     children: [
-                        //       Text(
-                        //         "    Hello..",
-                        //         style: TextStyle(
-                        //           fontSize: 20.spMin,
-                        //           fontWeight: FontWeight.bold,
-                        //           color:  Colors.black,
-                        //         ),
-                        //       ),
-                        //       Text(
-                        //         " Dohaa Aymann",
-                        //         style: TextStyle(
-                        //           fontSize: 20.spMin,
-                        //           fontWeight: FontWeight.bold,
-                        //           color: ColorStyle.purplefav
-                        //         ),
-                        //       ),
-                        //     ],
-                        //   ),
-                        // ),
-                         SizedBox(height:20.h),
-                        for (int i = 0; i < fieldsName.length; i++)
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                fieldsName[i],
-                                style:  TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20.spMin,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                              // DatePicker(
-                              //   type: MyDatePickerFieldTypes.all,
-                              //   controller: _bio,
-                              //   context: context,
-                              //   label: 'Due Date',
-                              //   initialDate: DateTime.now(),
-                              //   firstDate: DateTime.now()),
+                child: Column(
+                  children: [
+                    SizedBox(height:250.h),
+                    Container(
+                      margin:  EdgeInsets.symmetric(horizontal: 20.w),
+                      decoration: const BoxDecoration(
+                        // color: ColorStyle.lightgray,
+                      ),
+                      child: Form(
+                        key: _formKey,
+                        child: Column(
+                          children: [
+                            // Align(
+                            //   alignment: Alignment.topRight,
+                            //   child: Column(
+                            //     crossAxisAlignment: CrossAxisAlignment.start,
+                            //     children: [
+                            //       Text(
+                            //         "    Hello..",
+                            //         style: TextStyle(
+                            //           fontSize: 20.spMin,
+                            //           fontWeight: FontWeight.bold,
+                            //           color:  Colors.black,
+                            //         ),
+                            //       ),
+                            //       Text(
+                            //         " Dohaa Aymann",
+                            //         style: TextStyle(
+                            //           fontSize: 20.spMin,
+                            //           fontWeight: FontWeight.bold,
+                            //           color: ColorStyle.purplefav
+                            //         ),
+                            //       ),
+                            //     ],
+                            //   ),
+                            // ),
+                             SizedBox(height:20.h),
+                            for (int i = 0; i < fieldsName.length; i++)
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    fieldsName[i],
+                                    style:  TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.spMin,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  // DatePicker(
+                                  //   type: MyDatePickerFieldTypes.all,
+                                  //   controller: _bio,
+                                  //   context: context,
+                                  //   label: 'Due Date',
+                                  //   initialDate: DateTime.now(),
+                                  //   firstDate: DateTime.now()),
 
-                                CustomTextfromfield(hintText: fieldsName[i], Controller:  fieldsController[i],prefixIcon: icons[i],),
-                              // Container(
-                              //   height: 50,
-                              //   child: TextFormField(
-                              //     validator: (value) => _validateInput(value, fieldsName[i]),
-                              //     onTapOutside: (v) {
-                              //       FocusManager.instance.primaryFocus?.unfocus();
-                              //     },
-                              //     controller: fieldsController[i],
-                              //     readOnly: fieldsName[i] == 'Email' ? true : false,
-                              //     style: TextStyle(
-                              //       fontSize: 20,
-                              //       color:  Colors.black,
-                              //       fontWeight: FontWeight.bold,
-                              //     ),
-                              //     obscureText: fieldsName[i] == 'Password' ? obscure : false,
-                              //     decoration: InputDecoration(
-                              //       border: const UnderlineInputBorder(),
-                              //       suffixIcon: fieldsName[i] == 'Password'
-                              //           ? IconButton(
-                              //         onPressed: () {
-                              //           setState(() {
-                              //             obscure = !obscure;
-                              //           });
-                              //         },
-                              //         icon: obscure
-                              //             ? Icon(
-                              //           CupertinoIcons.eye_slash_fill,
-                              //           color:  Color(0xff2393FF)
-                              //         )
-                              //             : Icon(
-                              //           CupertinoIcons.eye,
-                              //           color: Color(0xff2393FF)
-                              //         ),
-                              //       )
-                              //           : null,
-                              //       hintText: fieldsName[i],
-                              //       hintStyle: TextStyle(color:Colors.grey,
-                              //           fontSize: 20),
-                              //     ),
-                              //   ),
-                              // ),
-                               SizedBox(height: 15.h),
-                            ],
-                          ),CustomButton(name: 'Save', ontap: (){},width: 220.w,height: 40.h,FontSize: 22,),
-                        SizedBox(height: 15.h),
-                      ],
+                                    CustomTextfromfield(hintText: fieldsName[i], Controller:  fieldsController[i],prefixIcon: icons[i],),
+                                  // Container(
+                                  //   height: 50,
+                                  //   child: TextFormField(
+                                  //     validator: (value) => _validateInput(value, fieldsName[i]),
+                                  //     onTapOutside: (v) {
+                                  //       FocusManager.instance.primaryFocus?.unfocus();
+                                  //     },
+                                  //     controller: fieldsController[i],
+                                  //     readOnly: fieldsName[i] == 'Email' ? true : false,
+                                  //     style: TextStyle(
+                                  //       fontSize: 20,
+                                  //       color:  Colors.black,
+                                  //       fontWeight: FontWeight.bold,
+                                  //     ),
+                                  //     obscureText: fieldsName[i] == 'Password' ? obscure : false,
+                                  //     decoration: InputDecoration(
+                                  //       border: const UnderlineInputBorder(),
+                                  //       suffixIcon: fieldsName[i] == 'Password'
+                                  //           ? IconButton(
+                                  //         onPressed: () {
+                                  //           setState(() {
+                                  //             obscure = !obscure;
+                                  //           });
+                                  //         },
+                                  //         icon: obscure
+                                  //             ? Icon(
+                                  //           CupertinoIcons.eye_slash_fill,
+                                  //           color:  Color(0xff2393FF)
+                                  //         )
+                                  //             : Icon(
+                                  //           CupertinoIcons.eye,
+                                  //           color: Color(0xff2393FF)
+                                  //         ),
+                                  //       )
+                                  //           : null,
+                                  //       hintText: fieldsName[i],
+                                  //       hintStyle: TextStyle(color:Colors.grey,
+                                  //           fontSize: 20),
+                                  //     ),
+                                  //   ),
+                                  // ),
+                                   SizedBox(height: 15.h),
+                                ],
+                              ),CustomButton(name: 'Save', ontap: (){},width: 220.w,height: 40.h,FontSize: 22,),
+                            SizedBox(height: 15.h),
+                          ],
+                        ),
+
+                      ),
                     ),
-
-                  ),
+                  ],
                 ),
               );
             },
           ),
-          Container(
-            height: 135.h,
-            width: 140.w,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color:ColorStyle.purplefav,
-              borderRadius: BorderRadius.circular(100.r),
-            ),
-            margin:  EdgeInsets.only(top: 80.h, left: 15.w),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                CircleAvatar(
-                radius:60.r,
-                backgroundImage:AssetImage('assets/dohaa.jpeg'),
-                // selectedImage == null?
-                //     NetworkImage('photo'),
-                // : FileImage(selectedImage!) as ImageProvider,
-                child: FullScreenWidget(
-                  disposeLevel: DisposeLevel.High,
-                  child: Hero(
-                    transitionOnUserGestures: true,
-                    tag: "s",
-                    child: Container(
-                      // width: 160.w,
-                      // height: 160.h,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                          image: AssetImage('assets/dohaa.jpeg'),
-                          // selectedImage == null
-                          //     ? NetworkImage(photo)
-                          //     : FileImage(selectedImage!) as ImageProvider,
-                          fit: BoxFit.cover,
+          Row(
+            children: [
+              Spacer(),
+              Container(
+                height: 120.h,
+                width: 130.w,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color:ColorStyle.white,
+                  borderRadius: BorderRadius.circular(100.r),
+                ),
+                margin:  EdgeInsets.only(top:100.h, left: 15.w),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    CircleAvatar(
+                    radius:60.r,
+                    backgroundImage:AssetImage('assets/dohaa.jpeg'),
+                    // selectedImage == null?
+                    //     NetworkImage('photo'),
+                    // : FileImage(selectedImage!) as ImageProvider,
+                    child: FullScreenWidget(
+                      disposeLevel: DisposeLevel.High,
+                      child: Hero(
+                        transitionOnUserGestures: true,
+                        tag: "s",
+                        child: Container(
+                          // width: 160.w,
+                          // height: 160.h,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.4), // Shadow color with opacity
+                                spreadRadius: 5, // Spread radius
+                                blurRadius: 7, // Blur radius
+                                offset: const Offset(5, 5), // Offset in x and y direction
+                              ),
+                            ],
+                            image: DecorationImage(
+                              image: AssetImage('assets/dohaa.jpeg'),
+                              // selectedImage == null
+                              //     ? NetworkImage(photo)
+                              //     : FileImage(selectedImage!) as ImageProvider,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
                       ),
                     ),
                   ),
+                    Container(
+                      // margin:  EdgeInsets.fromLTRB(50.w, 50.h, 0, 0),
+                      alignment: Alignment.bottomRight,
+                      child: CircleAvatar(
+                        backgroundColor: ColorStyle.gray,
+                        radius: 20.r,
+                        child: IconButton(
+                          onPressed: () {
+                            _pickImageFromGallery();
+                          },
+                          icon:  Icon(CupertinoIcons.camera_fill, size: 16.h),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-                Container(
-                  // margin:  EdgeInsets.fromLTRB(50.w, 50.h, 0, 0),
-                  alignment: Alignment.bottomRight,
-                  child: CircleAvatar(
-                    backgroundColor: ColorStyle.gray,
-                    radius: 20.r,
-                    child: IconButton(
-                      onPressed: () {
-                        _pickImageFromGallery();
-                      },
-                      icon:  Icon(CupertinoIcons.camera_fill, size: 16.h),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              Spacer(),
+            ],
           ),
           Container(
             margin: EdgeInsets.only(bottom: 60.h),
