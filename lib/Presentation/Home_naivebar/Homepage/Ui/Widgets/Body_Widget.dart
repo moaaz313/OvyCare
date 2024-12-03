@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../Core/themes/Colors/ColorsStyle.dart';
-Widget Body() {
+import '../../SubPages/Test_PCOD/ui/TestPCOD_view.dart';
+Widget Body(context) {
   return Column(
     children: [
       Container(
@@ -88,7 +89,9 @@ Widget Body() {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: ColorStyle.pink,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => TestPcodView(),));
+                },
                 child: const Text(
                   "Test PCOD",
                   style: TextStyle(

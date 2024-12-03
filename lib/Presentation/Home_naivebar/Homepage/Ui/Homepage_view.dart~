@@ -24,7 +24,7 @@ class HomepageView extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-            Body(context),
+            Body(),
             SizedBox(
               height: 15.h,
             ),
