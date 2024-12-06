@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 import 'package:tab_container/tab_container.dart';
@@ -19,7 +18,7 @@ class HealthyView extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(onPressed: (){
           Navigator.of(context).pop();
-        }, icon:Icon(Icons.arrow_back_ios,color: Colors.white,) ),
+        }, icon:const Icon(Icons.arrow_back_ios,color: Colors.white,) ),
       ),
       body: SizedBox(
         width: double.infinity,
@@ -52,7 +51,7 @@ class HealthyView extends StatelessWidget {
   List<Widget> _getTabs() {
     return <Widget>[
       for(int i=1;i<=tips.length;i++)
-       Text('${i}',style: TextStyle(fontWeight: FontWeight.bold),),
+       Text('${i}',style: const TextStyle(fontWeight: FontWeight.bold),),
     ];
   }
 
@@ -66,7 +65,7 @@ class HealthyView extends StatelessWidget {
             elevation: 3,
             margin:  EdgeInsets.symmetric(vertical: 10.h),
             child: Padding(
-              padding:  EdgeInsets.all(15.0),
+              padding:  const EdgeInsets.all(15.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -86,7 +85,7 @@ class HealthyView extends StatelessWidget {
                     ),
                   ),
                    SizedBox(height: 5.h),
-                  Text(
+                  const Text(
                     'Include:',
                     style: TextStyle(
                       fontSize: 16,

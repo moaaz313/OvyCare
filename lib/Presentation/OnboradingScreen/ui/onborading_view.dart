@@ -1,18 +1,14 @@
-
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ovacare/Core/Routing/Routes.dart';
+import 'package:ovacare/Core/Widgets/bottom_naive_bar.dart';
 
 import '../../../Core/themes/Colors/ColorsStyle.dart';
-import '../../Home_naivebar/home_naivebar/Ui/Homenaivebar_view.dart';
-// import 'home.dart';
 
 class OnboardingView extends StatefulWidget {
-  const OnboardingView({Key? key}) : super(key: key);
+  const OnboardingView({super.key});
 
   @override
   State<OnboardingView> createState() => _Onboarding_1State();
@@ -23,35 +19,41 @@ class _Onboarding_1State extends State<OnboardingView> {
 
   @override
   void initState() {
-    _controller = PageController(initialPage: 0 );
+    _controller = PageController(initialPage: 0);
     super.initState();
   }
+
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
   }
+
   // List sub_title=[,,];
   List<Map<String, String>> content = [
     {
-      'image':'assets/image (7).png',
+      'image': 'assets/image (7).png',
       'title': 'Know Your Health',
-      'content': "Easily assess your risk for PCO and PCOS with AI-powered tests designed to empower your well-being."
+      'content':
+          "Easily assess your risk for PCO and PCOS with AI-powered tests designed to empower your well-being."
     },
     {
-      'image':'assets/image (7).png',
+      'image': 'assets/image (7).png',
       'title': 'Stay in Sync',
-      'content': "Track your menstrual cycle with ease and receive timely notifications to plan ahead."
+      'content':
+          "Track your menstrual cycle with ease and receive timely notifications to plan ahead."
     },
     {
-      'image':'assets/image (7).png',
+      'image': 'assets/image (7).png',
       'title': 'Find Expert Help',
-      'content': "Get personalized recommendations for doctors to ensure the best care for your needs."
+      'content':
+          "Get personalized recommendations for doctors to ensure the best care for your needs."
     },
     {
-      'image':'assets/image (7).png',
+      'image': 'assets/image (7).png',
       'title': 'Live Your Best Life',
-      'content': "Discover curated tips for healthy eating and exercises tailored for your wellness journey."
+      'content':
+          "Discover curated tips for healthy eating and exercises tailored for your wellness journey."
     }
   ];
 
@@ -59,14 +61,14 @@ class _Onboarding_1State extends State<OnboardingView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView.builder(
-        onPageChanged: (int index){
+        onPageChanged: (int index) {
           setState(() {
             numberIndex = index;
           });
         },
         controller: _controller,
         itemCount: content.length,
-        itemBuilder: (_,i){
+        itemBuilder: (_, i) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -74,117 +76,133 @@ class _Onboarding_1State extends State<OnboardingView> {
               Stack(
                 children: [
                   Container(
-                    height:600.h,
+                    height: 600.h,
                     color: ColorStyle.pink,
-                    child: Center(child: Text("SideCutClipper()")),
+                    child: const Center(child: Text("SideCutClipper()")),
                   ),
-
                   Column(
                     children: [
-                      SizedBox(height:50.h,),
+                      SizedBox(
+                        height: 50.h,
+                      ),
                       Center(
-                         child:Image.asset(
-                           content[i]['image']!,height:600.h,width: 400.w,
-                         ),
+                        child: Image.asset(
+                          content[i]['image']!,
+                          height: 600.h,
+                          width: 400.w,
+                        ),
                       ),
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 40.h,horizontal: 25.w),
-                    child: Align(alignment: Alignment.topRight,
-                      child:InkWell(
-                        onTap: (){
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeNaivebarView(),));
-                        },child: Text("Skip",style: TextStyle(fontSize: 20.spMin,fontWeight: FontWeight.bold,color: Colors.white),),),
+                    margin:
+                        EdgeInsets.symmetric(vertical: 40.h, horizontal: 25.w),
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const BottomNaiveBar(),
+                          ));
+                        },
+                        child: Text(
+                          "Skip",
+                          style: TextStyle(
+                              fontSize: 20.spMin,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                      ),
                     ),
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    // mainAxisAlignment:MainAxisAlignment.start,
                     children: [
                       // Spacer(),
-                      SizedBox(height:MediaQuery.of(context).size.height-380.h,),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height - 380.h,
+                      ),
                       ClipPath(
-                        clipper:OvalTopBorderClipper(),
-                        child: Container(
-                          // height:380.h,
-                          // margin: EdgeInsets.only(top: 200.h),
-                          color: Colors.white,
-                          child: Column(
-                          children: [
-                            // Spacer()
-                            SizedBox(height: 25.h,),
-                            Container(
-                              padding: EdgeInsets.all(10),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding:  EdgeInsets.all(8.0),
-                                    child: Text(content[i]['title']! ,textAlign: TextAlign.center,
-                                        style: GoogleFonts.robotoSlab(
-                                          // fontStyle: FontStyle.italic,
-                                            fontSize:30,fontWeight: FontWeight.bold,color: ColorStyle.purple
-                                        )
-                                    ),
-                                  ),Align(
-                                    child:Text(
-                                      content[i]['content']!
-                                      ,textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize:16.spMin,
-                                        color: Colors.black54,
-                                        // fontWeight: FontWeight.bold,
+                          clipper: OvalTopBorderClipper(),
+                          child: Container(
+                            // height:380.h,
+                            // margin: EdgeInsets.only(top: 200.h),
+                            color: Colors.white,
+                            child: Column(
+                              children: [
+                                // Spacer()
+                                SizedBox(
+                                  height: 25.h,
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.all(10),
+                                  child: Column(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(content[i]['title']!,
+                                            textAlign: TextAlign.center,
+                                            style: GoogleFonts.robotoSlab(
+                                                fontSize: 30,
+                                                fontWeight: FontWeight.bold,
+                                                color: ColorStyle.purple)),
                                       ),
-
+                                      Align(
+                                        child: Text(
+                                          content[i]['content']!,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 16.spMin,
+                                            color: Colors.black54,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(
+                                      bottom: 20.h, right: 20.w, left: 20.w),
+                                  width: double.infinity,
+                                  height: 50.h,
+                                  child: FloatingActionButton(
+                                    child: Text(
+                                      numberIndex == content.length - 1
+                                          ? "Continue"
+                                          : "Next",
+                                      style: TextStyle(
+                                        fontSize: 20.spMin,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    onPressed: () {
+                                      if (numberIndex == content.length - 1) {
+                                        Navigator.pushNamed(
+                                            context, Routes.home);
+                                      }
+                                      _controller.nextPage(
+                                        duration:
+                                            const Duration(milliseconds: 200),
+                                        curve: Curves.easeIn,
+                                      );
+                                    },
+                                    backgroundColor: ColorStyle.pink,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(16.r),
                                     ),
                                   ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(bottom: 20.h , right: 20.w, left: 20.w),
-                              width: double.infinity,
-                              height:50.h,
-                              child: FloatingActionButton(
-                                child:  Text( numberIndex == content.length - 1 ? "Continue" : "Next" ,
-                                  style: TextStyle(
-                                    fontSize:20.spMin,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),),
-                                onPressed: (){
-                                  if (numberIndex == content.length - 1) {
-                                    Navigator.pushReplacement(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (_) =>HomeNaivebarView(),
-                                      ),
-                                    );
-                                  }
-                                  _controller.nextPage(
-                                    duration: Duration(milliseconds: 200),
-                                    curve: Curves.easeIn,
-                                  );
-                                },
-                                backgroundColor: ColorStyle.pink,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(16.r),
                                 ),
-                              ),
-
-                            ),
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: List.generate(content.length, (index) => box( index )
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: List.generate(
+                                        content.length, (index) => box(index)),
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
-
-                          ],
-                        ),
-                        )
-                      ),
+                          )),
                     ],
                   ),
                 ],
@@ -197,21 +215,19 @@ class _Onboarding_1State extends State<OnboardingView> {
     );
   }
 
-  Container box(int index ) {
+  Container box(int index) {
     return Container(
       height: 10.h,
-      width: numberIndex == index ? 30.w: 10.w,
-      margin: EdgeInsets.only(bottom: 40.h , right: 8.w),
+      width: numberIndex == index ? 30.w : 10.w,
+      margin: EdgeInsets.only(bottom: 40.h, right: 8.w),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(24),
-          color:ColorStyle.pink
-      ),
+          borderRadius: BorderRadius.circular(24), color: ColorStyle.pink),
     );
   }
-  void textsonboarding(){
-    if(numberIndex==0){
 
-    }
+  void textsonboarding() {
+    if (numberIndex == 0) {}
   }
 }
-int numberIndex=0;
+
+int numberIndex = 0;

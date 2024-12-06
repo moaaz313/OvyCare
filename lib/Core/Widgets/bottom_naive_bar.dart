@@ -91,10 +91,10 @@ class _BottomNaiveBar extends State<BottomNaiveBar> {
         child: PageView(
           controller: controller,
           children:  [
-            HomepageView(),
-            TipsView(),
-            EditProfileView(),
-            DoctorScreen(),
+            const HomepageView(),
+            const TipsView(),
+            const EditProfileView(),
+            const DoctorScreen(),
             SettingsView()
           ],
         ),

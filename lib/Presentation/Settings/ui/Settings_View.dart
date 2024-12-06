@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovacare/Core/Routing/Routes.dart';
 import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 import 'package:ovacare/Presentation/Settings/SubPages/Edit_Profile/ui/EditProfileView.dart';
 
@@ -14,22 +15,23 @@ class SettingsView extends StatelessWidget {
     return Scaffold(
       // backgroundColor: Colors.grey,
       body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 20.w),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               SizedBox(height:30.h),
+              SizedBox(height: 30.h),
               Row(
                 children: [
                   CircleAvatar(
                     radius: 40.r,
-                    backgroundImage: const AssetImage('assets/dohaa.jpeg'), // Replace with your image path
+                    backgroundImage: const AssetImage(
+                        'assets/dohaa.jpeg'), // Replace with your image path
                   ),
-                   SizedBox(width: 20.w),
+                  SizedBox(width: 20.w),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children:  [
+                    children: [
                       Text(
                         'Doha Noor',
                         style: TextStyle(
@@ -49,7 +51,7 @@ class SettingsView extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height:8.h),
+              SizedBox(height: 8.h),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.h),
                 child: const Divider(),
@@ -57,18 +59,22 @@ class SettingsView extends StatelessWidget {
               const SectionHeader(title: 'Account'),
               ProfileOption(
                 icon: Icons.person,
-                trailingWidget: Icon(Icons.arrow_forward_ios, size:18.h, color: Colors.black),
+                trailingWidget: Icon(Icons.arrow_forward_ios,
+                    size: 18.h, color: Colors.black),
                 title: 'Edit profile',
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const EditProfileView(),));
+                  Navigator.pushNamed(context, Routes.editProfile);
                 },
               ),
               ProfileOption(
                 icon: Icons.lock,
-                trailingWidget: Icon(Icons.arrow_forward_ios, size:18.h, color: Colors.black),
+                trailingWidget: Icon(Icons.arrow_forward_ios,
+                    size: 18.h, color: Colors.black),
                 title: 'Change Password',
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => GooglePasswordView(),));
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => GooglePasswordView(),
+                  ));
                   // Add your navigation logic
                 },
               ),
@@ -76,15 +82,21 @@ class SettingsView extends StatelessWidget {
               const SectionHeader(title: 'Settings'),
               ProfileOption(
                 icon: Icons.language,
-                trailingWidget: Icon(Icons.arrow_forward_ios, size:18.h, color: Colors.black),
+                trailingWidget: Icon(Icons.arrow_forward_ios,
+                    size: 18.h, color: Colors.black),
                 title: 'Language',
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => LanguageView(),));
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => LanguageView(),
+                  ));
                 },
               ),
               ProfileOption(
                 icon: Icons.notifications,
-                trailingWidget: Switch(value: true, onChanged: (value){},),
+                trailingWidget: Switch(
+                  value: true,
+                  onChanged: (value) {},
+                ),
                 title: 'Notification',
                 onTap: () {
                   // Add your navigation logic
@@ -104,23 +116,28 @@ class SettingsView extends StatelessWidget {
               const SectionHeader(title: 'Security'),
               ProfileOption(
                 icon: Icons.delete,
-                trailingWidget: Icon(Icons.arrow_forward_ios, size:18.h, color: Colors.black),
+                trailingWidget: Icon(Icons.arrow_forward_ios,
+                    size: 18.h, color: Colors.black),
                 title: 'Delete account',
                 onTap: () {
-                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => const OnboardingView(),));
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const OnboardingView(),
+                  ));
 
                   // Add your navigation logic
                 },
-              ),ProfileOption(
+              ),
+              ProfileOption(
                 icon: Icons.logout,
-                trailingWidget: Icon(Icons.arrow_forward_ios, size:18.h, color: Colors.black),
+                trailingWidget: Icon(Icons.arrow_forward_ios,
+                    size: 18.h, color: Colors.black),
                 title: 'Logout',
                 onTap: () {
                   // Add your navigation logic
                 },
               ),
-               // SizedBox(height:8.h),
-             // Spacer(),
+              // SizedBox(height:8.h),
+              // Spacer(),
               // InkWell(
               //   child: Container(
               //     alignment: Alignment.center,
@@ -150,10 +167,10 @@ class SectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:EdgeInsets.symmetric(vertical: 5.h),
+      padding: EdgeInsets.symmetric(vertical: 5.h),
       child: Text(
         title,
-        style:  TextStyle(
+        style: TextStyle(
           fontWeight: FontWeight.bold,
           color: Colors.black,
           fontSize: 20.spMin,
@@ -169,23 +186,32 @@ class ProfileOption extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
 
-  const ProfileOption({super.key, required this.icon, required this.title, required this.onTap, required this.trailingWidget});
+  const ProfileOption(
+      {super.key,
+      required this.icon,
+      required this.title,
+      required this.onTap,
+      required this.trailingWidget});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      // padding: EdgeInsets.symmetric(vertical: 3.h),
       child: ListTile(
         contentPadding: EdgeInsets.zero,
         leading: Container(
             padding: EdgeInsets.all(8.h),
-            decoration:BoxDecoration(
-              color: ColorStyle.lightgray,
-              borderRadius: BorderRadius.all(Radius.circular(10.r))
-            ),
-            child: Icon(icon, color: title == 'Delete account' ? Colors.red : ColorStyle.darkgray,size:25.h,)),
-        title: Text(title, style: TextStyle(fontSize:18.spMin,fontWeight: FontWeight.w500)),
-        trailing:  trailingWidget,
+            decoration: BoxDecoration(
+                color: ColorStyle.lightgray,
+                borderRadius: BorderRadius.all(Radius.circular(10.r))),
+            child: Icon(
+              icon,
+              color:
+                  title == 'Delete account' ? Colors.red : ColorStyle.darkgray,
+              size: 25.h,
+            )),
+        title: Text(title,
+            style: TextStyle(fontSize: 18.spMin, fontWeight: FontWeight.w500)),
+        trailing: trailingWidget,
         onTap: onTap,
       ),
     );

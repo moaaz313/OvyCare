@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovacare/Core/Routing/Routes.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
-import '../../SubPages/Test_PCOD/ui/TestPCOD_view.dart';
+
 Widget Body(context) {
   return Column(
     children: [
@@ -28,13 +29,15 @@ Widget Body(context) {
               style: TextStyle(
                   color: ColorStyle.purple,
                   fontWeight: FontWeight.bold,
-                  fontSize:20.spMin),
+                  fontSize: 20.spMin),
             ),
-            Text('Answer a series of questions\n to identify early signs of\nPolycystic Ovary Syndrome',textAlign:TextAlign.center,
+            Text(
+              'Answer a series of questions\n to identify early signs of\nPolycystic Ovary Syndrome',
+              textAlign: TextAlign.center,
               style: TextStyle(
-                color:Colors.black54,
-                  fontWeight: FontWeight.bold,
-                  fontSize:12.spMin,
+                color: Colors.black54,
+                fontWeight: FontWeight.bold,
+                fontSize: 12.spMin,
               ),
             ),
             ElevatedButton(
@@ -76,13 +79,15 @@ Widget Body(context) {
               style: TextStyle(
                   color: ColorStyle.purple,
                   fontWeight: FontWeight.bold,
-                  fontSize:20.spMin),
+                  fontSize: 20.spMin),
             ),
-            Text('Upload an Ultrasound image to \n evaluate potential indicators\n of Polycystic Ovaries disease',textAlign:TextAlign.center,
+            Text(
+              'Upload an Ultrasound image to \n evaluate potential indicators\n of Polycystic Ovaries disease',
+              textAlign: TextAlign.center,
               style: TextStyle(
-                color:Colors.black54,
+                color: Colors.black54,
                 fontWeight: FontWeight.bold,
-                fontSize:12.spMin,
+                fontSize: 12.spMin,
               ),
             ),
             ElevatedButton(
@@ -90,7 +95,7 @@ Widget Body(context) {
                   backgroundColor: ColorStyle.pink,
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => TestPcodView(),));
+                  Navigator.pushNamed(context, Routes.testPcod);
                 },
                 child: const Text(
                   "Test PCOD",
