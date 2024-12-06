@@ -1,10 +1,5 @@
 import 'dart:io';
-import 'dart:math';
 
-// import 'package:cloud_firestore/cloud_firestore.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
-// import 'package:firebase_storage/firebase_storage.dart';
-import 'package:date_picker_textfield/date_picker_textfield.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
@@ -14,9 +9,7 @@ import 'package:get/get_utils/src/get_utils/get_utils.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:ovacare/Core/Widgets/Custom_Button.dart';
 import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
-import 'package:path/path.dart';
-import 'package:provider/provider.dart';
-import 'package:uuid/uuid.dart';
+
 
 import '../../../../../../Core/Widgets/Custom_Textfromfield.dart';
 
@@ -149,7 +142,7 @@ List icons = [
           Align(
             alignment: Alignment.bottomRight,
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.rectangle,
                 color:ColorStyle.lightwhite,
 
@@ -160,7 +153,7 @@ List icons = [
             clipper: OvalBottomBorderClipper(),
             child: Container(
               height:180.h,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
                     ColorStyle.pink,
@@ -175,7 +168,7 @@ List icons = [
           LayoutBuilder(
             builder: (context, constraints) {
               return SingleChildScrollView(
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context).viewInsets.bottom + 5,
                 ),
@@ -294,7 +287,7 @@ List icons = [
           ),
           Row(
             children: [
-              Spacer(),
+              const Spacer(),
               Container(
                 height: 120.h,
                 width: 130.w,
@@ -309,7 +302,7 @@ List icons = [
                   children: [
                     CircleAvatar(
                     radius:60.r,
-                    backgroundImage:AssetImage('assets/dohaa.jpeg'),
+                    backgroundImage:const AssetImage('assets/dohaa.jpeg'),
                     // selectedImage == null?
                     //     NetworkImage('photo'),
                     // : FileImage(selectedImage!) as ImageProvider,
@@ -331,7 +324,7 @@ List icons = [
                                 offset: const Offset(5, 5), // Offset in x and y direction
                               ),
                             ],
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: AssetImage('assets/dohaa.jpeg'),
                               // selectedImage == null
                               //     ? NetworkImage(photo)
@@ -360,7 +353,7 @@ List icons = [
                   ],
                 ),
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
           Container(
