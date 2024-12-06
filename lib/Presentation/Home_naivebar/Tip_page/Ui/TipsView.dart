@@ -5,7 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovacare/Core/Widgets/Custom_Button.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
-import '../SubPages/healthyfoodPage/Ui/TipsView.dart';
+import '../SubPages/InfoPage/ui/Info_View.dart';
+import '../SubPages/healthyfoodPage/Ui/Healthy_view.dart';
 
 class TipsView extends StatelessWidget {
   const TipsView({super.key});
@@ -26,7 +27,7 @@ class TipsView extends StatelessWidget {
                     TextStyle(fontSize: 18.spMin, fontWeight: FontWeight.bold),
               ),
             ),
-            PcoTips(),
+            PcoTips(context),
             SizedBox(
               height: 10.h,
             ),
@@ -58,7 +59,7 @@ class TipsView extends StatelessWidget {
   }
 }
 
-Widget PcoTips() {
+Widget PcoTips(context) {
   return Container(
     height: 150.h,
     width: double.infinity,
@@ -111,7 +112,9 @@ Widget PcoTips() {
                       fontWeight: FontWeight.bold,
                       fontSize: 14.spMin),
                 ),
-                CustomButton(ontap: () {}, name: 'Learn More')
+                CustomButton(ontap: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => InfoView(),));
+                }, name: 'Learn More')
               ]),
         ),
       ],
@@ -172,7 +175,7 @@ Widget HealthyTips(context) {
                     height: 5.h,
                   ),
                   CustomButton(name: "Explore Recipes", ontap: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => HealthyEatingPage(),));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => HealthyView(),));
                   })
                 ]),
             // Spacer(),

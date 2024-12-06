@@ -289,20 +289,20 @@ List icons = [
             children: [
               const Spacer(),
               Container(
-                height: 120.h,
-                width: 130.w,
+                height: 130.h,
+                width: 140.w,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color:ColorStyle.white,
                   borderRadius: BorderRadius.circular(100.r),
                 ),
-                margin:  EdgeInsets.only(top:120.h, left: 15.w),
+                margin:  EdgeInsets.only(top:110.h, left: 15.w),
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
                     CircleAvatar(
                     radius:60.r,
-                    backgroundImage:const AssetImage('assets/dohaa.jpeg'),
+                    backgroundImage:AssetImage('assets/dohaa.jpeg'),
                     // selectedImage == null?
                     //     NetworkImage('photo'),
                     // : FileImage(selectedImage!) as ImageProvider,
