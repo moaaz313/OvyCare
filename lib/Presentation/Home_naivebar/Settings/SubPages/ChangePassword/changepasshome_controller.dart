@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'Google password/Google password.dart';
 import 'Google password/ui.dart';
 import 'User password/change_pass_view.dart';
 

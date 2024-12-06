@@ -1,5 +1,4 @@
 import 'package:animated_segmented_tab_control/animated_segmented_tab_control.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

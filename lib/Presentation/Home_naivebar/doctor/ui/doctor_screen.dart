@@ -39,25 +39,23 @@ class DoctorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding:  EdgeInsets.symmetric(vertical:20.h, horizontal: 20.w),
-          child: Column(
-            children: [
-              const CustomAppBar(
-                text: " Recommendation Doctor",
+      appBar: const CustomAppBar(
+        title: " Recommendation Doctor",
+      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: SearchDoctorBar(),
+            ),
+            Expanded(
+              child: DoctorList(
+                doctors: doctors,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: const SearchDoctorBar(),
-              ),
-              Expanded(
-                child: DoctorList(
-                  doctors: doctors,
-                ),
-              )
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );

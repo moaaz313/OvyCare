@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovacare/Core/Routing/app_routes.dart';
 import 'Core/Routing/Routes.dart';
 import 'Core/themes/Colors/ColorsStyle.dart';
-import 'Presentation/OnboradingScreen/ui/onborading_view.dart';
 
 class OvaCare extends StatelessWidget {
   final AppRoutes appRouter;
@@ -26,8 +25,7 @@ class OvaCare extends StatelessWidget {
             useMaterial3: true,
           ),
           onGenerateRoute: AppRoutes.generateRoute,
-          // initialRoute: Routes.home,
-          home: OnboardingView(),
+          initialRoute: Routes.home,
         ));
   }
 }
