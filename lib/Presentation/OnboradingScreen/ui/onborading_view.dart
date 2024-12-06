@@ -103,11 +103,11 @@ class _Onboarding_1State extends State<OnboardingView> {
                     // mainAxisAlignment:MainAxisAlignment.start,
                     children: [
                       // Spacer(),
-                      // SizedBox(height:MediaQuery.of(context).size.height-340.h,),
+                      SizedBox(height:MediaQuery.of(context).size.height-380.h,),
                       ClipPath(
                         clipper:OvalTopBorderClipper(),
                         child: Container(
-                          // height:280.h,
+                          // height:380.h,
                           // margin: EdgeInsets.only(top: 200.h),
                           color: Colors.white,
                           child: Column(
