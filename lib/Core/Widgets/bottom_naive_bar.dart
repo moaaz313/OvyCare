@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ovacare/Presentation/Homepage/Ui/Homepage_view.dart';
 import 'package:ovacare/Presentation/Settings/SubPages/Edit_Profile/ui/EditProfileView.dart';
+import 'package:ovacare/Presentation/Settings/ui/Settings_View.dart';
+import 'package:ovacare/Presentation/Tip_page/Ui/TipsView.dart';
+import 'package:ovacare/Presentation/doctor/ui/doctor_screen.dart';
 import 'package:stylish_bottom_bar/stylish_bottom_bar.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
-import '../../../Homepage/Ui/Homepage_view.dart';
-import '../../../Settings/ui/Settings_View.dart';
-import '../../../Tip_page/Ui/TipsView.dart';
-import '../../../doctor/ui/doctor_screen.dart';
 
-class HomeNaivebarView extends StatefulWidget {
-  const HomeNaivebarView({super.key});
+
+class  BottomNaiveBar extends StatefulWidget {
+  const BottomNaiveBar({super.key});
 
   @override
-  State<HomeNaivebarView> createState() => _HomepageViewState();
+  State<BottomNaiveBar> createState() => _BottomNaiveBar();
 }
 
-class _HomepageViewState extends State<HomeNaivebarView> {
+class _BottomNaiveBar extends State<BottomNaiveBar> {
   int selected = 0;
   bool heart = false;
   final controller = PageController();
@@ -89,11 +90,11 @@ class _HomepageViewState extends State<HomeNaivebarView> {
       body: SafeArea(
         child: PageView(
           controller: controller,
-          children: [
-            const HomepageView(),
-            const TipsView(),
-            const EditProfileView(),
-            const DoctorScreen(),
+          children:  [
+            HomepageView(),
+            TipsView(),
+            EditProfileView(),
+            DoctorScreen(),
             SettingsView()
           ],
         ),

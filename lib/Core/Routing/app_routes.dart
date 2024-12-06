@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ovacare/Presentation/Home_naivebar/Tip_page/Ui/TipsView.dart';
-import 'package:ovacare/Presentation/Home_naivebar/doctor/ui/doctor_screen.dart';
+import 'package:ovacare/Presentation/Tip_page/Ui/TipsView.dart';
+import 'package:ovacare/Presentation/doctor/ui/doctor_screen.dart';
 import 'package:ovacare/Presentation/Home_naivebar/home_naivebar/Ui/Homenaivebar_view.dart';
 import 'package:ovacare/Presentation/notification/ui/notification_screen.dart';
 import 'Routes.dart';
