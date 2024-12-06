@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovacare/Core/Widgets/custom_app_bar.dart';
 import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 import 'package:ovacare/Presentation/notification/ui/widgets/notification_list_view.dart';
@@ -67,10 +68,10 @@ class TipsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const Center(
+      body:  Center(
         child: Text(
           "Here are some useful tips!",
-          style: TextStyle(fontSize: 18, color: ColorStyle.darkgray),
+          style: TextStyle(fontSize: 18.spMin, color: ColorStyle.darkgray),
         ),
       ),
     );

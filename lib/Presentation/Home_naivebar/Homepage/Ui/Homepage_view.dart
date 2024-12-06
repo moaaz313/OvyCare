@@ -16,7 +16,7 @@ class HomepageView extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
         child: Column(
           children: [
-            Header(),
+            Header(context),
             SizedBox(
               height: 10.h,
             ),

@@ -22,7 +22,7 @@ class _NotificationListViewState extends State<NotificationListView> {
       itemCount: widget.notifications.length,
       itemBuilder: (context, index) {
         return Padding(
-          padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 8.w),
+          padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 8.w),
           child: NotificationCard(
             item: widget.notifications[index],
             onTap: () {

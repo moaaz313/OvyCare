@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../Core/themes/Colors/ColorsStyle.dart';
 import '../../../../../Core/themes/TextStyles/fontstyle.dart';
-Widget Header() {
+import '../../../../notification/ui/notification_screen.dart';
+Widget Header(context) {
   return Row(
     children: [
       CircleAvatar(
@@ -23,7 +24,9 @@ Widget Header() {
       ),
       Spacer(),
       InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationScreen(),));
+        },
         child: CircleAvatar(
           backgroundColor: ColorStyle.lightgray,
           child: Icon(

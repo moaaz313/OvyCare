@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 
 import 'notification_item.dart';
@@ -42,8 +41,8 @@ class NotificationCard extends StatelessWidget {
               style: const TextStyle(color: ColorStyle.gray),
             ),
             if (item.isNew)
-               CircleAvatar(
-                radius: 4.r,
+              const CircleAvatar(
+                radius: 4,
                 backgroundColor: ColorStyle.pink,
               ),
           ],
