@@ -71,45 +71,19 @@ class _Onboarding_1State extends State<OnboardingView> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // Spacer(),
-              Stack(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                // mainAxisAlignment:MainAxisAlignment.start,
                 children: [
-                  Container(
-                    height:600.h,
-                    color: ColorStyle.pink,
-                    child: Center(child: Text("SideCutClipper()")),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 40.h,horizontal: 25.w),
-                    child: Align(alignment: Alignment.topRight,
-                      child:InkWell(
-                        onTap: (){
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeNaivebarView(),));
-                        },child: Text("Skip",style: TextStyle(fontSize: 20.spMin,fontWeight: FontWeight.bold,color: Colors.white),),),
-                    ),
-                  ),
-                  Column(
-                    children: [
-                      SizedBox(height:50.h,),
-                      Center(
-                         child:Image.asset(
-                           content[i]['image']!,height:600.h,width: 400.w,
-                         ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    // mainAxisAlignment:MainAxisAlignment.start,
-                    children: [
-                      // Spacer(),
-                      SizedBox(height:MediaQuery.of(context).size.height-340.h,),
-                      ClipPath(
-                        clipper:OvalTopBorderClipper(),
-                        child: Container(
-                          // height:280.h,
-                          // margin: EdgeInsets.only(top: 200.h),
-                          color: Colors.white,
-                          child: Column(
+                  // Spacer(),
+                  // SizedBox(height:MediaQuery.of(context).size.height-340.h,),
+                  ClipPath(
+                      clipper:OvalTopBorderClipper(),
+                      child: Container(
+                        // height:280.h,
+                        // margin: EdgeInsets.only(top: 200.h),
+                        color: Colors.white,
+                        child: Column(
                           children: [
                             // Spacer()
                             SizedBox(height: 25.h,),
@@ -182,12 +156,40 @@ class _Onboarding_1State extends State<OnboardingView> {
 
                           ],
                         ),
-                        )
-                      ),
-                    ],
+                      )
                   ),
                 ],
               ),
+              Stack(
+                children: [
+                  Container(
+                    // height:600.h,
+                    color: ColorStyle.pink,
+                    child: Center(child: Text("SideCutClipper()")),
+                  ),
+
+                  Column(
+                    children: [
+                      SizedBox(height:50.h,),
+                      Center(
+                         child:Image.asset(
+                           content[i]['image']!,height:600.h,width: 400.w,
+                         ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 40.h,horizontal: 25.w),
+                    child: Align(alignment: Alignment.topRight,
+                      child:InkWell(
+                        onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeNaivebarView(),));
+                        },child: Text("Skip",style: TextStyle(fontSize: 20.spMin,fontWeight: FontWeight.bold,color: Colors.white),),),
+                    ),
+                  ),
+                ],
+              ),
+
               // Spacer(),
             ],
           );
