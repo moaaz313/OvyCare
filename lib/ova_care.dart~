@@ -26,8 +26,8 @@ class OvaCare extends StatelessWidget {
             useMaterial3: true,
           ),
           onGenerateRoute: AppRoutes.generateRoute,
-          initialRoute: Routes.login,
-          // home: HomeNa,
+          // initialRoute: Routes.login,
+          home: HomeNa,
         ));
   }
 }

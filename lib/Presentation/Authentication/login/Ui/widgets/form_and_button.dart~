@@ -31,7 +31,7 @@ class _FormAndButton extends State<FormAndButton> {
           children: [
             CustomTextfromfield(hintText: 'Email', Controller: _email,prefixIcon: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Icon(Icons.email,color: ColorStyle.darkgray,size:30,),
+              child: Icon(Icons.email,color: ColorStyle.lightgray,size:30,),
             ),),
             // const AppTextFormField(
             //   hintText: 'Email',
