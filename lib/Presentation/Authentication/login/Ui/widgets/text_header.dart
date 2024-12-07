@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextHeader extends StatelessWidget {
-  const TextHeader({super.key});
+  final String? headertxt;
+  final String? subtxt;
+
+  const TextHeader({super.key, this.headertxt, this.subtxt});
 
   @override
   Widget build(BuildContext context) {
@@ -13,17 +16,18 @@ class TextHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            "Welcome Back!",
-            style: TextStyle(
+          Text(
+            headertxt ?? "Welcome Back!",
+            style: const TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: Colors.deepPurple),
           ),
           SizedBox(height: 8.h),
-          const Text(
-            "We are excited to have you back, can't wait to see what you have been up to since you last logged in",
-            style: TextStyle(fontSize: 16, color: Colors.grey),
+          Text(
+            subtxt ??
+                "We are excited to have you back, can't wait to see what you have been up to since you last logged in",
+            style: const TextStyle(fontSize: 16, color: Colors.grey),
           ),
         ],
       ),

@@ -10,5 +10,6 @@ class Routes {
   static const String healthy = '/healthy';
   static const String info = '/info';
   static const String editProfile = '/editProfile';
+  static const String signUp = '/signUp';
 
 }

@@ -46,7 +46,8 @@ class _FormAndButton extends State<FormAndButton> {
               alignment: AlignmentDirectional.centerEnd,
               child: TextButton(
                   onPressed: () {},
-                  child: const Text(
+                  // ignore: prefer_const_constructors
+                  child: Text(
                     ' Forget Password ?',
                   )),
             ),

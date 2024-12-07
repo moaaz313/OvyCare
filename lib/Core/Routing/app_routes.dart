@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ovacare/Core/Widgets/bottom_naive_bar.dart';
 import 'package:ovacare/Presentation/Authentication/login/Ui/login_screen.dart';
+import 'package:ovacare/Presentation/Authentication/sign_up/ui/sign_up_screen.dart';
 import 'package:ovacare/Presentation/OnboradingScreen/ui/onborading_view.dart';
 import 'package:ovacare/Presentation/Settings/SubPages/Edit_Profile/ui/EditProfileView.dart';
 import 'package:ovacare/Presentation/Test_PCOD/ui/TestPCOD_view.dart';
@@ -17,7 +18,9 @@ class AppRoutes {
       case Routes.onboarding:
         return MaterialPageRoute(builder: (context) => const OnboardingView());
       case Routes.login:
-      return MaterialPageRoute(builder: (context) =>  LoginScreen());
+        return MaterialPageRoute(builder: (context) => const LoginScreen());
+      case Routes.signUp:
+        return MaterialPageRoute(builder: (context) => SignUpScreen());
       case Routes.home:
         return MaterialPageRoute(builder: (context) => const BottomNaiveBar());
       case Routes.recommedDoc:
@@ -33,7 +36,7 @@ class AppRoutes {
       case Routes.editProfile:
         return MaterialPageRoute(builder: (context) => const EditProfileView());
       case Routes.testPcod:
-        return MaterialPageRoute(builder: (context) => const TestPcodView());    
+        return MaterialPageRoute(builder: (context) => const TestPcodView());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

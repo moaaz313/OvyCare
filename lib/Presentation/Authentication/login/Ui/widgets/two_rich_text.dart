@@ -3,6 +3,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovacare/Core/Routing/Routes.dart';
 import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 
 class TwoRichText extends StatelessWidget {
@@ -14,7 +15,7 @@ class TwoRichText extends StatelessWidget {
       children: [
         _buildTermsAndPrivacyText(),
         SizedBox(height: 15.h),
-        _buildSignUp(),
+        _buildSignUp(context),
       ],
     );
   }
@@ -41,13 +42,13 @@ class TwoRichText extends StatelessWidget {
     );
   }
 
-  Widget _buildSignUp() {
+  Widget _buildSignUp(context) {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
         children: [
           const TextSpan(
-            text: 'Already have an account yet? ',
+            text: "Don't have an account? ",
             style: TextStyle(color: ColorStyle.black),
           ),
           TextSpan(
@@ -56,7 +57,7 @@ class TwoRichText extends StatelessWidget {
             // Use a gesture recognizer for interactivity
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                print("Sign Up tapped");
+                Navigator.pushNamed(context, Routes.signUp);
               },
           ),
         ],
