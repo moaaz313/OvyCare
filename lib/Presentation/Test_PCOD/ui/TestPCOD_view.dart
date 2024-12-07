@@ -51,7 +51,7 @@ class TestPcodView extends StatelessWidget {
               ),
             ),
             SizedBox(height:30.h,),
-            CustomButton(name: 'Get Result', ontap:(){},width:300.w,height: 45.h,FontSize: 20.spMin,backgroundColor: ColorStyle.pink,)
+            CustomButton(name: 'Get Result', ontap:(){},width:300.w,height: 45.h,fontSize: 20.spMin,backgroundColor: ColorStyle.pink,)
           ],
         ),
       ),

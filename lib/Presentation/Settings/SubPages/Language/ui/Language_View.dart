@@ -71,7 +71,7 @@ class _LanguageSelectionPageState extends State<LanguageView> {
                 child: CustomButton(
                     name: 'Save',
                     height: 45.h,
-                    FontSize: 22.spMin,
+                    fontSize: 22.spMin,
                     ontap: () {
                       // Save selected language and navigate back
                       ScaffoldMessenger.of(context).showSnackBar(

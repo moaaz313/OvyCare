@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovacare/Core/Routing/Routes.dart';
 import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
-import 'package:ovacare/Presentation/Settings/SubPages/Edit_Profile/ui/EditProfileView.dart';
+import 'package:ovacare/Presentation/Settings/SubPages/ChangePassword/User%20password/change_pass_view.dart';
 
 import '../../OnboradingScreen/ui/onborading_view.dart';
-import '../SubPages/ChangePassword/Google password/ui.dart';
 
 import '../SubPages/Language/ui/Language_View.dart';
 
@@ -73,7 +72,7 @@ class SettingsView extends StatelessWidget {
                 title: 'Change Password',
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => GooglePasswordView(),
+                    builder: (context) => ChangePasswordPage(),
                   ));
                   // Add your navigation logic
                 },

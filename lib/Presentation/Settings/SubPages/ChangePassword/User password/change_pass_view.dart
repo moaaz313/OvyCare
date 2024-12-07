@@ -67,7 +67,7 @@ class ChangePasswordPage extends StatelessWidget {
                   // if (controller.formKey.currentState!.validate()) {
                   //   await controller.updatePassword(context);
                   // }
-                },FontSize: 20.spMin,height:45.h,width:double.infinity,),
+                },fontSize: 20.spMin,height:45.h,width:double.infinity,),
 
             ],
           ),

@@ -17,15 +17,16 @@ class OvaCare extends StatelessWidget {
             const Size(375, 812), 
         minTextAdapt: true,
         child: MaterialApp(
+          
           locale: DevicePreview.locale(context),
           builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
+          theme: ThemeData( scaffoldBackgroundColor: ColorStyle.lightwhite,
             colorScheme: ColorScheme.fromSeed(seedColor: ColorStyle.pink),
             useMaterial3: true,
           ),
           onGenerateRoute: AppRoutes.generateRoute,
-          initialRoute: Routes.onboarding,
+          initialRoute: Routes.login,
         ));
   }
 }

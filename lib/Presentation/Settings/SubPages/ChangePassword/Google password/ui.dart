@@ -33,7 +33,7 @@ class GooglePasswordView extends StatelessWidget {
             ),
             CustomTextfromfield(hintText:"yours@gmail.com", Controller: controller),
             SizedBox(height: 15.h,),
-            Center(child: CustomButton(name: 'Send Email', ontap: (){},FontSize: 20.spMin,height:45.h,width:double.infinity,)),
+            Center(child: CustomButton(name: 'Send Email', ontap: (){},fontSize: 20.spMin,height:45.h,width:double.infinity,)),
 
           ],
         ),

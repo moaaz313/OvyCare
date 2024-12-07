@@ -273,7 +273,7 @@ List icons = [
                                   // ),
                                    SizedBox(height: 15.h),
                                 ],
-                              ),CustomButton(name: 'Save', ontap: (){},width: 220.w,height: 40.h,FontSize: 22,),
+                              ),CustomButton(name: 'Save', ontap: (){},width: 220.w,height: 40.h,fontSize: 22,),
                             SizedBox(height: 15.h),
                           ],
                         ),
