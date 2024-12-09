@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 import 'package:ovacare/Presentation/doctor/ui/widgets/doctor.dart';
+import 'package:ovacare/Presentation/doctor_details/ui/doctor_details.dart';
+
+import '../../../../Core/Routing/Routes.dart';
 
 class DoctorCard extends StatelessWidget {
   final Doctor doctor;
-
   const DoctorCard({required this.doctor, super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: ColorStyle.white,
-      margin: EdgeInsets.symmetric(vertical:6.h),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16.r),
-      ),
+    return InkWell(
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => DoctorDetailsScreen(doctor: doctor),));
+      },
       child: Container(
-        height: 130.h,
-        padding: EdgeInsets.all(8.w),
+        // height: 130.h,
+        padding: EdgeInsets.only(bottom:15.h),
         child: Row(
           children: [
             Container(
-              width: 110.w,
-              height: 110.h,
+              width: 80.w,
+              height:80.h,
               decoration: BoxDecoration(
                 color: ColorStyle.pink,
                 borderRadius: BorderRadius.circular(12.r),

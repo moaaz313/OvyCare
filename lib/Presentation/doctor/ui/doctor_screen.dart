@@ -40,16 +40,19 @@ class DoctorScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(
+        useIconButton: false,
         title: " Recommendation Doctor",
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+        padding: EdgeInsets.symmetric(vertical:5.h, horizontal:15.w),
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: SearchDoctorBar(),
-            ),
+            // const Padding(
+            //   // padding: EdgeInsets.all(8.0),
+            //   child:
+            // ),
+            SearchDoctorBar(),
+            SizedBox(height:10.h),
             Expanded(
               child: DoctorList(
                 doctors: doctors,

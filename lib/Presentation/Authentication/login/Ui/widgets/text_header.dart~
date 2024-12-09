@@ -19,10 +19,11 @@ class TextHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 30.h,),
           Text(
             headertxt ?? "Welcome Back!",
-            style:  GoogleFonts.roboto(
-              fontSize: 30.spMin,
+            style:  GoogleFonts.acme(
+              fontSize: 40.spMin,
               fontWeight: FontWeight.bold,
               color: ColorStyle.purple,
             )),

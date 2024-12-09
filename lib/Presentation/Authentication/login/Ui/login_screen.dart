@@ -21,9 +21,9 @@ class LoginScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const TextHeader(),
-                SizedBox(height: 24.h),
+                SizedBox(height: 30.h),
                 const FormAndButton(),
-                SizedBox(height: 16.h),
+                SizedBox(height: 30.h),
                 Row(
                   children: [
                     const Expanded(child: Divider()),
@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
                     const Expanded(child: Divider()),
                   ],
                 ),
-                SizedBox(height: 10.h),
+                SizedBox(height: 16.h),
                 Container(
                   height: 55.h,
                   // padding: EdgeInsets.symmetric(vertical: 10.h),
@@ -75,7 +75,7 @@ class LoginScreen extends StatelessWidget {
                 //   textColor: ColorStyle.black,
                 //   icon:Image.asset("assets/Google.png",scale: 2,),
                 // ),
-                SizedBox(height:15.h),
+                SizedBox(height:50.h),
                 const Center(child: TwoRichText())
               ],
             ),

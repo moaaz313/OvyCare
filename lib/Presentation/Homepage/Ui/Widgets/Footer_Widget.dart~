@@ -25,14 +25,14 @@ Widget Footer(context) {
       reviews: '4,279 reviews',
       imageUrl: 'assets/doctor.png',
     ),
-    // Doctor(
-    //   name: 'Dr. Alaa',
-    //   specialty: 'General',
-    //   hospital: 'RSUD Gatot Subroto',
-    //   rating: '4.8',
-    //   reviews: '4,279 reviews',
-    //   imageUrl: 'assets/image_doctor.png',
-    // ),
+    Doctor(
+      name: 'Dr. Alaa',
+      specialty: 'General',
+      hospital: 'RSUD Gatot Subroto',
+      rating: '4.8',
+      reviews: '4,279 reviews',
+      imageUrl: 'assets/image_doctor.png',
+    ),
   ];
 
   return Column(

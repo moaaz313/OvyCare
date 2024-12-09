@@ -19,11 +19,11 @@ class TextHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 10.h,),
+          SizedBox(height: 30.h,),
           Text(
             headertxt ?? "Welcome Back!",
-            style:  GoogleFonts.roboto(
-              fontSize: 30.spMin,
+            style:  GoogleFonts.acme(
+              fontSize: 40.spMin,
               fontWeight: FontWeight.bold,
               color: ColorStyle.purple,
             )),
@@ -35,7 +35,7 @@ class TextHeader extends StatelessWidget {
           // SizedBox(height: 8.h),
           Text(
             subtxt ??
-                "We are excited to have you back, can't wait to see what you have been up to since you last logged in",
+                "We are excited to have you back, can't wait to see what you have been up to since you last logged in.",
             style:  TextStyle(fontSize: 15.spMin, color: Colors.grey),
           ),
         ],

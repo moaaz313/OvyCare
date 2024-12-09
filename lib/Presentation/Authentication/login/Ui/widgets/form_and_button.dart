@@ -37,7 +37,17 @@ class _FormAndButton extends State<FormAndButton> {
             //   hintText: 'Email',
             // ),
             SizedBox(height: 15.h),
-            CustomTextfromfield(hintText: 'Password', Controller: _email,isObscure: true,),
+            CustomTextfromfield(hintText: 'Password', Controller: _email,isObscure: true,prefixIcon: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Icon(Icons.lock,color: ColorStyle.darkgray,size:30,
+              ),
+            ),SuffixIcon:  GestureDetector(
+          onTap: () {
+            isObscureText = !isObscureText;
+            setState(() {});
+          },
+          child: Icon(isObscureText ? Icons.visibility_off : Icons.visibility,color: ColorStyle.purple,size:25,)),
+    ),
             // AppTextFormField(
             //   hintText: 'Password',
             //   isObscureText: isObscureText,

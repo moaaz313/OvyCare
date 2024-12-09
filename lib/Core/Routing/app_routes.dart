@@ -9,6 +9,7 @@ import 'package:ovacare/Presentation/Tip_page/SubPages/InfoPage/ui/Info_View.dar
 import 'package:ovacare/Presentation/Tip_page/SubPages/healthyfoodPage/Ui/Healthy_view.dart';
 import 'package:ovacare/Presentation/Tip_page/Ui/TipsView.dart';
 import 'package:ovacare/Presentation/doctor/ui/doctor_screen.dart';
+import 'package:ovacare/Presentation/doctor_details/ui/doctor_details.dart';
 import 'package:ovacare/Presentation/notification/ui/notification_screen.dart';
 import 'Routes.dart';
 
@@ -33,6 +34,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => HealthyView());
       case Routes.info:
         return MaterialPageRoute(builder: (context) => const InfoView());
+        case Routes.DocDetails:
+        // return MaterialPageRoute(builder: (context) =>  DoctorDetailsScreen(doctor: 'doctor'));
       case Routes.editProfile:
         return MaterialPageRoute(builder: (context) => const EditProfileView());
       case Routes.testPcod:
