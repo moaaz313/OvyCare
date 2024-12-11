@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovacare/Core/Routing/Routes.dart';
 import 'package:ovacare/Core/Widgets/Custom_Button.dart';
 import 'package:ovacare/Core/Widgets/app_text_form_field.dart';
 
@@ -57,6 +58,7 @@ class _FormAndButton extends State<FormAndButton> {
               ontap: () {
                 if (formKey.currentState!.validate()) {
                   print("Doneeeeeeeeee");
+                  Navigator.pushNamed(context, Routes.home);
                 } else {
                   autovalidateMode = AutovalidateMode.always;
                 }

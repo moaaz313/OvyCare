@@ -10,6 +10,8 @@ import 'package:ovacare/Presentation/Tip_page/SubPages/healthyfoodPage/Ui/Health
 import 'package:ovacare/Presentation/Tip_page/Ui/TipsView.dart';
 import 'package:ovacare/Presentation/doctor/ui/doctor_screen.dart';
 import 'package:ovacare/Presentation/notification/ui/notification_screen.dart';
+import 'package:ovacare/Presentation/test_pcos/ui/second_question_screen.dart';
+import 'package:ovacare/Presentation/test_pcos/ui/test_pcos_screen.dart';
 import 'Routes.dart';
 
 class AppRoutes {
@@ -35,8 +37,12 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => const InfoView());
       case Routes.editProfile:
         return MaterialPageRoute(builder: (context) => const EditProfileView());
-      case Routes.testPcod:
+      case Routes.testPCOD:
         return MaterialPageRoute(builder: (context) => const TestPcodView());
+      case Routes.testPCOS:
+        return MaterialPageRoute(builder: (context) => const   TestPCOSScreen());
+      case Routes.secondQuestion:
+        return MaterialPageRoute(builder: (context) => const SecondQuestionScreen(userAnswers: {},));
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

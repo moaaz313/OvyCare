@@ -44,7 +44,9 @@ Widget Body(context) {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: ColorStyle.pink,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, Routes.testPCOS);
+                },
                 child: const Text(
                   "Test PCOS",
                   style: TextStyle(
@@ -95,7 +97,7 @@ Widget Body(context) {
                   backgroundColor: ColorStyle.pink,
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, Routes.testPcod);
+                  Navigator.pushNamed(context, Routes.testPCOD);
                 },
                 child: const Text(
                   "Test PCOD",
