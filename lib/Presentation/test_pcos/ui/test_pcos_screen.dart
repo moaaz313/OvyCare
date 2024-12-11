@@ -9,7 +9,7 @@ class TestPCOSScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(title: " PCOS Test"),
+      appBar: CustomAppBar(title: " PCOS Test",useIconButton: false,),
       body: QuestionList(),
     );
   }

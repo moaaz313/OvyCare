@@ -9,13 +9,16 @@ class ArchiveScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: " Archive"),
+      appBar: const CustomAppBar(
+        title: " Archive",
+        useIconButton: false,
+      ),
       body: ListView.builder(
         itemCount: archive.length,
         itemBuilder: (context, index) {
           final test = archive[index];
           final responses = test['responses'] as Map<String, dynamic>;
-          
+
           return Card(
             margin: const EdgeInsets.all(8.0),
             child: ListTile(
@@ -34,7 +37,8 @@ class ArchiveScreen extends StatelessWidget {
     );
   }
 
-  void _showTestDetailsDialog(BuildContext context, Map<String, dynamic> responses) {
+  void _showTestDetailsDialog(
+      BuildContext context, Map<String, dynamic> responses) {
     showDialog(
       context: context,
       builder: (BuildContext context) {

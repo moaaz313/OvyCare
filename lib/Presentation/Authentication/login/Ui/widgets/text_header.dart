@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import '../../../../../Core/themes/Colors/ColorsStyle.dart';
 
 class TextHeader extends StatelessWidget {
   final String? headertxt;
@@ -12,22 +15,28 @@ class TextHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 30.w),
+      padding: EdgeInsets.symmetric(horizontal: 0.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 30.h,),
           Text(
             headertxt ?? "Welcome Back!",
-            style: const TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Colors.deepPurple),
-          ),
-          SizedBox(height: 8.h),
+            style:  GoogleFonts.acme(
+              fontSize: 40.spMin,
+              fontWeight: FontWeight.bold,
+              color: ColorStyle.purple,
+            )),
+          //   TextStyle(
+          //       fontSize: 35.spMin,
+          //       fontWeight: FontWeight.bold,
+          //       color: ColorStyle.purple),
+          // ),
+          // SizedBox(height: 8.h),
           Text(
             subtxt ??
-                "We are excited to have you back, can't wait to see what you have been up to since you last logged in",
-            style: const TextStyle(fontSize: 16, color: Colors.grey),
+                "We are excited to have you back, can't wait to see what you have been up to since you last logged in.",
+            style:  TextStyle(fontSize: 15.spMin, color: Colors.grey),
           ),
         ],
       ),

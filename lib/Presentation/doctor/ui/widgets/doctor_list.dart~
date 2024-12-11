@@ -12,7 +12,6 @@ class DoctorList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: doctors.length,
-      shrinkWrap: true,
       itemBuilder: (context, index) {
         return Column(
           children: [

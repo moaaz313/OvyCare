@@ -9,6 +9,7 @@ class CustomTextfromfield extends StatelessWidget {
   final bool isObscure;
   final TextEditingController Controller;
   final Widget? prefixIcon;
+  final Widget? SuffixIcon;
 
   CustomTextfromfield({
     Key? key,
@@ -16,6 +17,7 @@ class CustomTextfromfield extends StatelessWidget {
     this.isObscure = false, // Default value for isObscure
     required this.Controller,
     this.prefixIcon,
+    this.SuffixIcon,
   }) : super(key: key);
 
   String? _validateInput(String? value) {
@@ -68,6 +70,7 @@ class CustomTextfromfield extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(16.r)),
         ),
         prefixIcon: prefixIcon,
+        suffixIcon: SuffixIcon,
         isDense: true,
       ),
     );

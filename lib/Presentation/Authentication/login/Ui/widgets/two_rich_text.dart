@@ -27,7 +27,7 @@ class TwoRichText extends StatelessWidget {
         children: [
           TextSpan(
             text: 'By logging, you agree to our Terms & Conditions ',
-            style: TextStyle(color: ColorStyle.black),
+            style: TextStyle(color: ColorStyle.darkgray),
           ),
           TextSpan(
             text: 'and\n',
@@ -47,13 +47,13 @@ class TwoRichText extends StatelessWidget {
       textAlign: TextAlign.center,
       text: TextSpan(
         children: [
-          const TextSpan(
+           TextSpan(
             text: "Don't have an account? ",
-            style: TextStyle(color: ColorStyle.black),
+            style: TextStyle(color: ColorStyle.darkgray,fontWeight: FontWeight.bold),
           ),
           TextSpan(
             text: 'Sign Up',
-            style: const TextStyle(color: ColorStyle.pink),
+            style: const TextStyle(color: ColorStyle.pink,fontWeight: FontWeight.bold),
             // Use a gesture recognizer for interactivity
             recognizer: TapGestureRecognizer()
               ..onTap = () {
