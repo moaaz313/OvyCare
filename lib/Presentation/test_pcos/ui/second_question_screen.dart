@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart'; // For date formatting
 import 'package:ovacare/Core/Widgets/custom_app_bar.dart';
+import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 import 'package:ovacare/Presentation/archive/ui/archive_screen.dart';
 import 'widgets/slider_question.dart';
 
@@ -73,7 +74,7 @@ class _SecondQuestionScreenState extends State<SecondQuestionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:   CustomAppBar(title: "PCOS Test",useIconButton: false,),
+      appBar:   CustomAppBar(title: "PCOS Test",useIconButton:true,backgroundColor: ColorStyle.pink,),
       // AppBar(
       //   title: Text("Test PCOS"),
       //   backgroundColor: Colors.pink,

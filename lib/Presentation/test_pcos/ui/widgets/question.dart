@@ -26,7 +26,11 @@ class Question extends StatelessWidget {
           style:  TextStyle(fontSize: 16.spMin, fontWeight: FontWeight.w600),
         ),
         Row(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // const Spacer(),
+            SizedBox(width: 50.w,),
             Expanded(
               child: RadioListTile<String>(
                 title: const Text('Yes'),

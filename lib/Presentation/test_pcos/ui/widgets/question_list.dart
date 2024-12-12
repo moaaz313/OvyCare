@@ -29,30 +29,29 @@ class _QuestionListState extends State<QuestionList> {
 
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Generate all questions in one Column
-              for (int index = 0; index < questions.length; index++)
-                Question(
-                  questionNumber: index + 1,
-                  questionText: questions[index],
-                  groupValue: answers[index + 1], // Track answer for each question
-                  onChanged: (value) {
-                    setState(() {
-                      answers[index + 1] = value;
-                    });
-                  },
-                ),
-
-              // Bottom row with navigation
-              // const Spacer(),
-            ],
+        // Questions Section
+        Flexible(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: ListView(
+              children: [
+                for (int index = 0; index < questions.length; index++)
+                  Question(
+                    questionNumber: index + 1,
+                    questionText: questions[index],
+                    groupValue: answers[index + 1], // Track answer for each question
+                    onChanged: (value) {
+                      setState(() {
+                        answers[index + 1] = value;
+                      });
+                    },
+                  ),
+              ],
+            ),
           ),
         ),
-        Spacer(),
+
+        // Bottom Navigation Section
         Container(
           color: ColorStyle.pink,
           height: 60.h,
@@ -61,8 +60,11 @@ class _QuestionListState extends State<QuestionList> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Text('1 of 2', style: TextStyle(fontSize:20.spMin,color: Colors.white)),
-              ), // Question indicator
+                child: Text(
+                  '1 of 2',
+                  style: TextStyle(fontSize: 20.spMin, color: Colors.white),
+                ),
+              ),
               IconButton(
                 onPressed: () {
                   // Pass the answers to the second screen
@@ -75,15 +77,15 @@ class _QuestionListState extends State<QuestionList> {
                     ),
                   );
                 },
-                icon:  CircleAvatar(
+                icon: CircleAvatar(
                   radius: 30.r,
-                    backgroundColor: Colors.white,
-                    child: Icon(Icons.arrow_forward)),
-                color: Colors.pink, // Forward navigation icon
+                  backgroundColor: Colors.white,
+                  child: Icon(Icons.arrow_forward, color: ColorStyle.pink),
+                ),
               ),
             ],
           ),
-        )
+        ),
       ],
     );
   }
