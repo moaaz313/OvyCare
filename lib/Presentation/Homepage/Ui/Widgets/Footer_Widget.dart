@@ -1,10 +1,8 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovacare/Core/Routing/Routes.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
-import '../../../doctor/ui/doctor_screen.dart';
 import '../../../doctor/ui/widgets/doctor.dart';
 import '../../../doctor/ui/widgets/doctor_card.dart';
 import '../../../doctor/ui/widgets/doctor_list.dart';
