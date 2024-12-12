@@ -73,7 +73,7 @@ class _SecondQuestionScreenState extends State<SecondQuestionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:   CustomAppBar(title: "PCOS Test",useIconButton: false,),
+      appBar:  const CustomAppBar(title: "PCOS Test",useIconButton: false,),
       // AppBar(
       //   title: Text("Test PCOS"),
       //   backgroundColor: Colors.pink,

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 import '../second_question_screen.dart';
 import 'question.dart';
 
@@ -25,52 +27,64 @@ class _QuestionListState extends State<QuestionList> {
       'Is your menstrual cycle regular?',
     ];
 
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Generate all questions in one Column
-          for (int index = 0; index < questions.length; index++)
-            Question(
-              questionNumber: index + 1,
-              questionText: questions[index],
-              groupValue: answers[index + 1], // Track answer for each question
-              onChanged: (value) {
-                setState(() {
-                  answers[index + 1] = value;
-                });
-              },
-            ),
-
-          // Bottom row with navigation
-          const Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(top: 16.0), // Padding for spacing
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                const Text('1 of 2', style: TextStyle(fontSize: 16)), // Question indicator
-                IconButton(
-                  onPressed: () {
-                    // Pass the answers to the second screen
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SecondQuestionScreen(
-                          userAnswers: answers, // Pass the answers
-                        ),
-                      ),
-                    );
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Generate all questions in one Column
+              for (int index = 0; index < questions.length; index++)
+                Question(
+                  questionNumber: index + 1,
+                  questionText: questions[index],
+                  groupValue: answers[index + 1], // Track answer for each question
+                  onChanged: (value) {
+                    setState(() {
+                      answers[index + 1] = value;
+                    });
                   },
-                  icon: const Icon(Icons.arrow_forward),
-                  color: Colors.pink, // Forward navigation icon
                 ),
-              ],
-            ),
+
+              // Bottom row with navigation
+              // const Spacer(),
+            ],
           ),
-        ],
-      ),
+        ),
+        Spacer(),
+        Container(
+          color: ColorStyle.pink,
+          height: 60.h,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text('1 of 2', style: TextStyle(fontSize:20.spMin,color: Colors.white)),
+              ), // Question indicator
+              IconButton(
+                onPressed: () {
+                  // Pass the answers to the second screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SecondQuestionScreen(
+                        userAnswers: answers, // Pass the answers
+                      ),
+                    ),
+                  );
+                },
+                icon:  CircleAvatar(
+                  radius: 30.r,
+                    backgroundColor: Colors.white,
+                    child: Icon(Icons.arrow_forward)),
+                color: Colors.pink, // Forward navigation icon
+              ),
+            ],
+          ),
+        )
+      ],
     );
   }
 }
