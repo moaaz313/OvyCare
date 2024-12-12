@@ -48,7 +48,7 @@ class _QuestionListState extends State<QuestionList> {
           Padding(
             padding: const EdgeInsets.only(top: 16.0), // Padding for spacing
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text('1 of 2', style: TextStyle(fontSize: 16)), // Question indicator
                 IconButton(

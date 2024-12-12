@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 
 class Question extends StatelessWidget {
   final int questionNumber;
@@ -32,7 +31,7 @@ class Question extends StatelessWidget {
                 title: const Text('Yes'),
                 value: 'Yes',
                 groupValue: groupValue,
-                activeColor: ColorStyle.pink,
+                activeColor: Colors.pink,
                 onChanged: onChanged,
               ),
             ),
@@ -41,7 +40,7 @@ class Question extends StatelessWidget {
                 title: const Text('No'),
                 value: 'No',
                 groupValue: groupValue,
-                activeColor: ColorStyle.pink,
+                activeColor: Colors.pink,
                 onChanged: onChanged,
               ),
             ),
