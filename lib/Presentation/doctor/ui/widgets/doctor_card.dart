@@ -16,7 +16,6 @@ class DoctorCard extends StatelessWidget {
         ));
       },
       child: Container(
-        // height: 130.h,
         padding: EdgeInsets.only(bottom: 15.h),
         child: Row(
           children: [
@@ -60,9 +59,6 @@ class DoctorCard extends StatelessWidget {
                     padding: EdgeInsetsDirectional.only(end: 8.w),
                     child: Row(
                       children: [
-                        const Icon(Icons.location_on_outlined),
-                        Text(doctor.city),
-                        const Spacer(),
                         Icon(Icons.star, color: Colors.amber, size: 18.sp),
                         Text(
                           '4.8',
@@ -71,6 +67,9 @@ class DoctorCard extends StatelessWidget {
                             color: Colors.grey[600],
                           ),
                         ),
+                        const Spacer(),
+                        const Icon(Icons.location_on_outlined),
+                        Text(doctor.city),
                       ],
                     ),
                   ),
