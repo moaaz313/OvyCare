@@ -36,7 +36,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       // centerTitle: true,
       leading:useIconButton? IconButton(
         padding: const EdgeInsetsDirectional.only(start: 10),
-        icon:  Icon(Icons.arrow_back_ios, color:backgroundColor==ColorStyle.pink?ColorStyle.white:ColorStyle.black,),
+        icon: const Icon(Icons.arrow_back_ios, color: ColorStyle.black),
         onPressed: () {
           Navigator.pop(context);
         },

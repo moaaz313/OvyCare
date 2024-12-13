@@ -43,7 +43,7 @@ class CustomButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           // minimumSize: const Size(64, 36),
           // maximumSize: Size.infinite,
-          fixedSize:  Size(width ?? 64.w, height ?? 36.h),
+          // fixedSize:  Size(width ?? 64.w, height ?? 36.h),
           // minimumSize: Size(width ?? 64.w, height ?? 36.h),
           maximumSize: Size.infinite,
           backgroundColor: backgroundColor ?? ColorStyle.pink,

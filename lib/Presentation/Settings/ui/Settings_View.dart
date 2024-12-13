@@ -7,6 +7,7 @@ import 'package:ovacare/Presentation/archive/ui/archive_screen.dart';
 
 import '../../OnboradingScreen/ui/onborading_view.dart';
 
+import '../../archive/ui/TestHistory_view.dart';
 import '../../archive/ui/test_details_screen.dart';
 import '../SubPages/Language/ui/Language_View.dart';
 
@@ -82,9 +83,9 @@ class SettingsView extends StatelessWidget {
               ProfileOption(
                 icon: Icons.archive_outlined,
                 trailingWidget: Icon(Icons.arrow_forward_ios, size:18.h, color: Colors.black),
-                title: 'Archived Tests',
+                title: 'Test History',
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => TestDetailsScreen(test: {},),));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) =>ArchivePage(),));
                 },
               ),
               SizedBox(height: 8.h),
