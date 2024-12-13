@@ -24,7 +24,8 @@ class _DoctorScreenState extends State<DoctorScreen> {
   }
 
   Future<void> loadDoctors() async {
-    final String response = await rootBundle.loadString('assets/doctor/clinido_doctors_en.json');
+    final String response = await rootBundle
+        .loadString('assets/doctor/clinido_doctors_en.json');
     final List<dynamic> data = json.decode(response);
 
     setState(() {

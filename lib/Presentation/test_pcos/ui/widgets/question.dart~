@@ -30,6 +30,7 @@ class Question extends StatelessWidget {
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // const Spacer(),
+            SizedBox(width: 50.w,),
             Expanded(
               child: RadioListTile<String>(
                 title: const Text('Yes'),

@@ -16,19 +16,18 @@ class DoctorCard extends StatelessWidget {
         ));
       },
       child: Container(
-        padding: EdgeInsets.only(bottom: 15.h),
+        padding: EdgeInsets.only(bottom: 10.h),
         child: Row(
           children: [
             Container(
               width: 100.w,
               height: 100.h,
               decoration: BoxDecoration(
+                color: Colors.black,
                 borderRadius: BorderRadius.circular(12.r),
                 image: DecorationImage(
-                  alignment:
-                      AlignmentDirectional.topEnd, // Alignment for the image
-                  image: NetworkImage(
-                      doctor.profileImage.trim()), // Your image source
+                  alignment:AlignmentDirectional.topEnd, // Alignment for the image
+                  image: NetworkImage(doctor.profileImage.trim()), // Your image source
                   fit: BoxFit.cover,
                 ),
               ),
@@ -46,7 +45,7 @@ class DoctorCard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 10.h),
+                  // SizedBox(height: .h),
                   Text(
                     doctor.title,
                     style: TextStyle(
@@ -55,6 +54,7 @@ class DoctorCard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 8.h),
+                  // Spacer(),
                   Padding(
                     padding: EdgeInsetsDirectional.only(end: 8.w),
                     child: Row(

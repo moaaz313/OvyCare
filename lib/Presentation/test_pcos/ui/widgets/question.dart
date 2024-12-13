@@ -21,7 +21,7 @@ class Question extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+       Text(
           "$questionNumber: $questionText",
           style:  TextStyle(fontSize: 16.spMin, fontWeight: FontWeight.w600),
         ),
