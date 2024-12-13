@@ -25,7 +25,7 @@ class DoctorDetailsScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     image: DecorationImage(
-                      image: AssetImage(doctor.imageUrl),
+                      image: NetworkImage(doctor.profileImage),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -41,12 +41,12 @@ class DoctorDetailsScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text('${doctor.specialty} | ${doctor.hospital}'),
-                    Row(
+                    Text(doctor.title),
+                    const Row(
                       children: [
-                        const Icon(Icons.star, color: Colors.amber),
-                        const SizedBox(width: 4),
-                        Text('${doctor.rating} (${doctor.reviews} reviews)'),
+                        Icon(Icons.star, color: Colors.amber),
+                        SizedBox(width: 4),
+                        Text('4.8 (4729) reviews)'),
                       ],
                     ),
                   ],

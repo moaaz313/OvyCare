@@ -5,35 +5,34 @@ import 'package:ovacare/Core/Routing/Routes.dart';
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
 import '../../../doctor/ui/widgets/doctor.dart';
 import '../../../doctor/ui/widgets/doctor_card.dart';
-import '../../../doctor/ui/widgets/doctor_list.dart';
 
 Widget Footer(context) {
-  final List<Doctor> doctors = const [
-    Doctor(
-      name: 'Dr. Dohaaaa',
-      specialty: 'General',
-      imageUrl: 'assets/doctor.png',
-      hospital: 'RSUD Gatot Subroto',
-      rating: '4.8',
-      reviews: '4,279 reviews',
-    ),
-    Doctor(
-      name: 'Dr. Nooooooooor',
-      specialty: 'General',
-      hospital: 'RSUD Gatot Subroto',
-      rating: '4.8',
-      reviews: '4,279 reviews',
-      imageUrl: 'assets/doctor.png',
-    ),
-    Doctor(
-      name: 'Dr. Alaa',
-      specialty: 'General',
-      hospital: 'RSUD Gatot Subroto',
-      rating: '4.8',
-      reviews: '4,279 reviews',
-      imageUrl: 'assets/image_doctor.png',
-    ),
-  ];
+  // final List<Doctor> doctors = const [
+  //   Doctor(
+  //     name: 'Dr. Dohaaaa',
+  //     specialty: 'General',
+  //     imageUrl: 'assets/doctor.png',
+  //     hospital: 'RSUD Gatot Subroto',
+  //     rating: '4.8',
+  //     reviews: '4,279 reviews',
+  //   ),
+  //   Doctor(
+  //     name: 'Dr. Nooooooooor',
+  //     specialty: 'General',
+  //     hospital: 'RSUD Gatot Subroto',
+  //     rating: '4.8',
+  //     reviews: '4,279 reviews',
+  //     imageUrl: 'assets/doctor.png',
+  //   ),
+  //   Doctor(
+  //     name: 'Dr. Alaa',
+  //     specialty: 'General',
+  //     hospital: 'RSUD Gatot Subroto',
+  //     rating: '4.8',
+  //     reviews: '4,279 reviews',
+  //     imageUrl: 'assets/image_doctor.png',
+  //   ),
+  // ];
 
   return Column(
     children: [
@@ -58,14 +57,12 @@ Widget Footer(context) {
           )
         ],
       ),
-      DoctorList(
-        doctors: doctors,
-      ),
+      // DoctorList(
+      //   doctors: doctors,
+      // ),
     ],
   );
 }
-
-
 
 class DoctorListHome extends StatelessWidget {
   final List<Doctor> doctor;
@@ -95,4 +92,3 @@ class DoctorListHome extends StatelessWidget {
     );
   }
 }
-

@@ -6,7 +6,7 @@ import 'doctor_card.dart';
 class DoctorList extends StatelessWidget {
   final List<Doctor> doctors;
 
-  const DoctorList({required this.doctors, Key? key}) : super(key: key);
+  const DoctorList({required this.doctors, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,7 @@ class DoctorList extends StatelessWidget {
       shrinkWrap: true,
       itemBuilder: (context, index) {
         return Column(
-          children: [
-            DoctorCard(doctor: doctors[index]),
-            // Divider()
-          ],
+          children: [DoctorCard(doctor: doctors[index]), const Divider()],
         );
       },
     );

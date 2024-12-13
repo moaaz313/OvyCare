@@ -1,17 +1,34 @@
 class Doctor {
   final String name;
-  final String specialty;
-  final String hospital;
-  final String rating;
-  final String reviews;
-  final String imageUrl;
+  final String title;
+  final String about;
+  final String location;
+  final String city;
+  final String governorate;
+  final String consultationFee;
+  final String profileImage;
 
-  const Doctor({
+  Doctor({
     required this.name,
-    required this.specialty,
-    required this.hospital,
-    required this.rating,
-    required this.reviews,
-    required this.imageUrl,
+    required this.title,
+    required this.about,
+    required this.location,
+    required this.city,
+    required this.governorate,
+    required this.consultationFee,
+    required this.profileImage,
   });
+
+  factory Doctor.fromJson(Map<String, dynamic> json) {
+    return Doctor(
+      name: json['name'],
+      title: json['title'],
+      about: json['about'],
+      location: json['location'],
+      city: json['city'],
+      governorate: json['governorate'],
+      consultationFee: json['consultation_fee'],
+      profileImage: json['profile_image'],
+    );
+  }
 }

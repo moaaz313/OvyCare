@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 import 'package:ovacare/Presentation/doctor/ui/widgets/doctor.dart';
 import 'package:ovacare/Presentation/doctor_details/ui/doctor_details.dart';
-
-import '../../../../Core/Routing/Routes.dart';
 
 class DoctorCard extends StatelessWidget {
   final Doctor doctor;
@@ -14,22 +11,25 @@ class DoctorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => DoctorDetailsScreen(doctor: doctor),));
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => DoctorDetailsScreen(doctor: doctor),
+        ));
       },
       child: Container(
         // height: 130.h,
-        padding: EdgeInsets.only(bottom:15.h),
+        padding: EdgeInsets.only(bottom: 15.h),
         child: Row(
           children: [
             Container(
-              width: 80.w,
-              height:80.h,
+              width: 100.w,
+              height: 100.h,
               decoration: BoxDecoration(
-                color: ColorStyle.pink,
                 borderRadius: BorderRadius.circular(12.r),
                 image: DecorationImage(
-                  alignment: AlignmentDirectional.topEnd,
-                  image: AssetImage(doctor.imageUrl),
+                  alignment:
+                      AlignmentDirectional.topEnd, // Alignment for the image
+                  image: NetworkImage(
+                      doctor.profileImage.trim()), // Your image source
                   fit: BoxFit.cover,
                 ),
               ),
@@ -49,25 +49,30 @@ class DoctorCard extends StatelessWidget {
                   ),
                   SizedBox(height: 10.h),
                   Text(
-                    '${doctor.specialty} | ${doctor.hospital}',
+                    doctor.title,
                     style: TextStyle(
                       fontSize: 14.sp,
                       color: Colors.grey[600],
                     ),
                   ),
                   SizedBox(height: 8.h),
-                  Row(
-                    children: [
-                      Icon(Icons.star, color: Colors.amber, size: 18.sp),
-                      SizedBox(width: 6.w),
-                      Text(
-                        '${doctor.rating} (${doctor.reviews})',
-                        style: TextStyle(
-                          fontSize: 14.sp,
-                          color: Colors.grey[600],
+                  Padding(
+                    padding: EdgeInsetsDirectional.only(end: 8.w),
+                    child: Row(
+                      children: [
+                        const Icon(Icons.location_on_outlined),
+                        Text(doctor.city),
+                        const Spacer(),
+                        Icon(Icons.star, color: Colors.amber, size: 18.sp),
+                        Text(
+                          '4.8',
+                          style: TextStyle(
+                            fontSize: 14.sp,
+                            color: Colors.grey[600],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),

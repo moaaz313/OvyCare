@@ -1,58 +1,51 @@
 import 'package:flutter/material.dart';
-import 'package:ovacare/Presentation/doctor/ui/widgets/doctor.dart';
-
+import 'dart:convert';
+import 'package:flutter/services.dart';
 import '../../../Core/Widgets/custom_app_bar.dart';
+import 'widgets/doctor.dart';
 import 'widgets/doctor_list.dart';
 import 'widgets/search_doctor_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class DoctorScreen extends StatelessWidget {
+class DoctorScreen extends StatefulWidget {
   const DoctorScreen({super.key});
 
-  final List<Doctor> doctors = const [
-    Doctor(
-      name: 'Dr. Dohaaaa',
-      specialty: 'General',
-      imageUrl: 'assets/doctor.png',
-      hospital: 'RSUD Gatot Subroto',
-      rating: '4.8',
-      reviews: '4,279 reviews',
-    ),
-    Doctor(
-      name: 'Dr. Nooooooooor',
-      specialty: 'General',
-      hospital: 'RSUD Gatot Subroto',
-      rating: '4.8',
-      reviews: '4,279 reviews',
-      imageUrl: 'assets/doctor.png',
-    ),
-    Doctor(
-      name: 'Dr. Alaa',
-      specialty: 'General',
-      hospital: 'RSUD Gatot Subroto',
-      rating: '4.8',
-      reviews: '4,279 reviews',
-      imageUrl: 'assets/image_doctor.png',
-    ),
-  ];
+  @override
+  State<DoctorScreen> createState() => _DoctorScreenState();
+}
+
+class _DoctorScreenState extends State<DoctorScreen> {
+  List<Doctor> doctors = [];
+
+  @override
+  void initState() {
+    super.initState();
+    loadDoctors();
+  }
+
+  Future<void> loadDoctors() async {
+    final String response = await rootBundle
+        .loadString('assets/doctor/clinido_doctors_en.json');
+    final List<dynamic> data = json.decode(response);
+
+    setState(() {
+      doctors = data.map((json) => Doctor.fromJson(json)).toList();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  CustomAppBar(
-        useIconButton: false,
-        title: " Recommendation Doctor",
+      appBar: CustomAppBar(
+        useIconButton: true,
+        title: "Top Doctor",
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical:5.h, horizontal:15.w),
+        padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 15.w),
         child: Column(
           children: [
-            // const Padding(
-            //   // padding: EdgeInsets.all(8.0),
-            //   child:
-            // ),
-            SearchDoctorBar(),
-            SizedBox(height:10.h),
+            const SearchDoctorBar(),
+            SizedBox(height: 10.h),
             Expanded(
               child: DoctorList(
                 doctors: doctors,
