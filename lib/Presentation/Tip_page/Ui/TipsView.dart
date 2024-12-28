@@ -111,11 +111,15 @@ Widget PcoTips(context) {
                       fontWeight: FontWeight.bold,
                       fontSize: 14.spMin),
                 ),
-                CustomButton(
-                    ontap: () {
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: ColorStyle.pink,
+
+                  ),
+                    onPressed: () {
                       Navigator.pushNamed(context, Routes.info);
                     },
-                    name: 'Learn More')
+                    child:Text('Learn More',style: TextStyle(color: Colors.white),))
               ]),
         ),
       ],
@@ -175,11 +179,15 @@ Widget HealthyTips(context) {
                   SizedBox(
                     height: 5.h,
                   ),
-                  CustomButton(
-                      name: "Explore Recipes",
-                      ontap: () {
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: ColorStyle.pink,
+
+                      ),
+                      onPressed: () {
                         Navigator.pushNamed(context, Routes.healthy);
-                      })
+                      },
+                      child:Text('Explore Recipes',style: TextStyle(color: Colors.white),))
                 ]),
             // Spacer(),
           ],
@@ -243,7 +251,14 @@ Widget ExerciseTips() {
                       fontWeight: FontWeight.bold,
                       fontSize: 14.spMin),
                 ),
-                CustomButton(ontap: () {}, name: 'Start Exercising')
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: ColorStyle.pink,
+
+                    ),
+                    onPressed: () {
+                    },
+                    child:Text('Start Exercising',style: TextStyle(color: Colors.white),))
               ]),
         ),
       ],

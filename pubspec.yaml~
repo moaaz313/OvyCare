@@ -28,68 +28,52 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animated_segmented_tab_control: ^2.0.0
+  build_runner: ^2.4.7
+  cached_network_image: ^3.3.1
+  calendar_timeline: ^1.1.3
+  cloud_firestore: ^4.17.5
+  cupertino_icons: ^1.0.2
+  date_picker_textfield: ^1.0.4
+  device_preview: ^1.2.0
+  dio: ^5.3.3
+  easy_localization: ^3.0.3
+  expandable: ^5.0.1
+  firebase_auth: ^4.16.0
+  firebase_core: ^2.27.0
+  fl_chart: ^0.69.2
   flutter:
     sdk: flutter
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  get: ^4.6.5
-  #A build system for Dart code generation and modular compilation
-  build_runner: ^2.4.7
-  # State management
   flutter_bloc: ^8.1.3
-  # Code generator (mainly used with cubit & retrofit)
+  flutter_custom_clippers: ^2.1.0
+  flutter_native_splash: ^2.3.5
+
+  flutter_screenutil: ^5.9.0
+  flutter_secure_storage: ^9.2.2
+  flutter_svg: ^2.0.9
+  fluttertoast: ^8.2.8
+  font_awesome_flutter: ^10.8.0
   freezed: ^2.4.5
   freezed_annotation: ^2.4.1
-  # for dependency injection
+  full_screen_image: ^2.0.0
+  get: ^4.6.5
   get_it: ^7.6.4
-  # Automatically generate code for converting to and from JSON by annotating Dart classes
-  json_serializable: ^6.7.1
+  google_fonts: ^6.2.1
+  image_picker: ^1.1.2
+  intl: 0.19.0
   json_annotation: ^4.8.1
-  # Networking
-  dio: ^5.3.3
+  json_serializable: ^6.7.1
+  mobkit_dashed_border: ^0.0.7
+  pretty_dio_logger: ^1.3.1
   retrofit: ^4.0.3
   retrofit_generator: ^8.0.4
-  pretty_dio_logger: ^1.3.1
-  # localization
-  intl: ^0.19.0
-  easy_localization: ^3.0.3
-  # for splash screen
-  flutter_native_splash: ^2.3.5
-  # An SVG rendering and widget library for Flutter, which allows painting
-  flutter_svg: ^2.0.9
-  # for adapting screen and font size.
-  flutter_screenutil: ^5.9.0
-  firebase_core: ^2.27.0
-  # Flutter library to load and cache network images.
-  cached_network_image: ^3.3.1
-  # reading and writing simple key-value pairs
   shared_preferences: ^2.2.3
-  # provides API to store data in secure storage.
-  flutter_secure_storage: ^9.2.2
-  # easy way to add shimmer effect
   shimmer: ^3.0.0
-  #for home bottom bar
   stylish_bottom_bar: ^1.1.0
-  #for icons
-  font_awesome_flutter: ^10.8.0
-  calendar_timeline: ^1.1.3
-  #to check if screen responsive and adaptive
-  device_preview: ^1.2.0
-  #for image picker
-  image_picker: ^1.1.2
-  #for date picker
-  date_picker_timeline: ^1.2.3
-  flutter_custom_clippers: ^2.1.0
-  full_screen_image: ^2.0.0
+  tab_container: ^3.5.3
+  table_calendar: ^3.1.3
 #  date_time_field: ^0.0.2
-
 dev_dependencies:
-#  intl: ^0.17.0
-  flutter_test:
-    sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -97,10 +81,11 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -112,14 +97,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - assets/doctor/clinido_doctors_en.json
   #   - images/a_dot_ham.jpeg
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
-
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/to/asset-from-package
-
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a

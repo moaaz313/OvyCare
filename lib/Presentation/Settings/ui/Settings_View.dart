@@ -7,6 +7,7 @@ import 'package:ovacare/Presentation/archive/ui/archive_screen.dart';
 
 import '../../OnboradingScreen/ui/onborading_view.dart';
 
+import '../../Result Normal/ui/resultNormal_view.dart';
 import '../../archive/ui/TestHistory_view.dart';
 import '../../archive/ui/test_details_screen.dart';
 import '../SubPages/Language/ui/Language_View.dart';
@@ -97,7 +98,7 @@ class SettingsView extends StatelessWidget {
                 title: 'Language',
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => LanguageView(),
+                    builder: (context) =>LanguageView()
                   ));
                 },
               ),

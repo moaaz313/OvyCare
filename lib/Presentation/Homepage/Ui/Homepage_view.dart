@@ -20,7 +20,7 @@ class HomepageView extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-            Calendar(),
+            Calendar(context),
             SizedBox(
               height: 10.h,
             ),
