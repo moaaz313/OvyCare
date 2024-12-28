@@ -20,8 +20,8 @@ class _FormAndButton extends State<FormAndButton> {
   final GlobalKey<FormState> formKey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   bool isObscureText = true;
-  TextEditingController _email=TextEditingController();
-  TextEditingController _pass=TextEditingController();
+  final TextEditingController _email=TextEditingController();
+  final TextEditingController _pass=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -29,16 +29,16 @@ class _FormAndButton extends State<FormAndButton> {
         autovalidateMode: autovalidateMode,
         child: Column(
           children: [
-            CustomTextfromfield(hintText: 'Email', Controller: _email,prefixIcon: Padding(
-              padding: const EdgeInsets.all(10.0),
+            CustomTextfromfield(hintText: 'Email', Controller: _email,prefixIcon: const Padding(
+              padding: EdgeInsets.all(10.0),
               child: Icon(Icons.email,color: ColorStyle.darkgray,size:30,),
             ),),
             // const AppTextFormField(
             //   hintText: 'Email',
             // ),
             SizedBox(height: 15.h),
-            CustomTextfromfield(hintText: 'Password', Controller: _email,isObscure: true,prefixIcon: Padding(
-              padding: const EdgeInsets.all(10.0),
+            CustomTextfromfield(hintText: 'Password', Controller: _email,isObscure: true,prefixIcon: const Padding(
+              padding: EdgeInsets.all(10.0),
               child: Icon(Icons.lock,color: ColorStyle.darkgray,size:30,
               ),
             ),SuffixIcon:  GestureDetector(
@@ -66,7 +66,7 @@ class _FormAndButton extends State<FormAndButton> {
                   onPressed: () {},
                   // ignore: prefer_const_constructors
                   child: Text(
-                    'Forgot Password ?',style: TextStyle(color: ColorStyle.purple,fontWeight: FontWeight.bold),
+                    'Forgot Password ?',style: const TextStyle(color: ColorStyle.purple,fontWeight: FontWeight.bold),
                   )),
             ),
             // SizedBox(height:10.h),

@@ -28,7 +28,7 @@ class HomepageView extends StatelessWidget {
             SizedBox(
               height: 15.h,
             ),
-            Footer(context),
+            const Footer(),
             // DoctorScreen)()
           ],
         ),

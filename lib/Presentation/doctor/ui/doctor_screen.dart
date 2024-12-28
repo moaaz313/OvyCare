@@ -16,6 +16,28 @@ class DoctorScreen extends StatefulWidget {
 
 class _DoctorScreenState extends State<DoctorScreen> {
   List<Doctor> doctors = [];
+  List<Doctor> filteredDoctors = [];
+  String selectedGovernorate = 'All';
+  String searchQuery = '';
+
+  final List<String> governorates = [
+    'All',
+    'Cairo',
+    'Giza',
+    'Qalyubia',
+    'Alexandria',
+    'Assiut',
+    'Minya',
+    'Luxor',
+    'Beni Suef',
+    'Sharqia',
+    'Dakahlia',
+    'Suez',
+    'Gharbia',
+    'Fayoum',
+    'Sohag',
+    'Damietta'
+  ];
 
   @override
   void initState() {
@@ -24,11 +46,25 @@ class _DoctorScreenState extends State<DoctorScreen> {
   }
 
   Future<void> loadDoctors() async {
-    final String response = await rootBundle.loadString('assets/doctor/clinido_doctors_en.json');
+    final String response =
+        await rootBundle.loadString('assets/doctor/clinido_doctors_en.json');
     final List<dynamic> data = json.decode(response);
 
     setState(() {
       doctors = data.map((json) => Doctor.fromJson(json)).toList();
+      filteredDoctors = doctors; // Initialize filteredDoctors
+    });
+  }
+
+  void filterDoctors() {
+    setState(() {
+      filteredDoctors = doctors.where((doctor) {
+        final matchesGovernorate = selectedGovernorate == 'All' ||
+            doctor.governorate == selectedGovernorate;
+        final matchesQuery =
+            doctor.name.toLowerCase().contains(searchQuery.toLowerCase());
+        return matchesGovernorate && matchesQuery;
+      }).toList();
     });
   }
 
@@ -36,20 +72,40 @@ class _DoctorScreenState extends State<DoctorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        useIconButton: true,
+        useIconButton: false,
         title: "Top Doctors",
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 15.w),
+        padding: EdgeInsets.symmetric(
+            vertical: 10.h,
+            horizontal: 20.w), // Added more padding for a cleaner look
         child: Column(
           children: [
-            const SearchDoctorBar(),
-            SizedBox(height: 10.h),
+            SearchDoctorBar(
+              filteredDoctors: filteredDoctors,
+              governorates: governorates,
+              selectedGovernorate: selectedGovernorate,
+              onGovernorateChanged: (value) {
+                setState(() {
+                  selectedGovernorate = value!;
+                  filterDoctors();
+                });
+              },
+              onSearchChanged: (value) {
+                setState(() {
+                  searchQuery = value;
+                  filterDoctors();
+                });
+              },
+            ),
+            SizedBox(
+                height: 15
+                    .h), // Add more spacing between the search bar and the doctor list
             Expanded(
               child: DoctorList(
-                doctors: doctors,
+                doctors: filteredDoctors,
               ),
-            )
+            ),
           ],
         ),
       ),

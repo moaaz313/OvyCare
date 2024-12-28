@@ -9,7 +9,7 @@ void main() {
     DevicePreview(
       enabled: !kReleaseMode,
       builder: (context) => OvaCare(
-        appRouter: AppRoutes(),
+        appRouter: AppRoutes(), 
       ),
     ),
   );
