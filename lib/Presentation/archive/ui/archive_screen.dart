@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovacare/Core/Widgets/custom_app_bar.dart';
@@ -36,8 +35,8 @@ class ArchiveScreen extends StatelessWidget {
               // final test = archive[index];
               // final responses = test['responses'] as Map<String, dynamic>;
           
-              return Card(
-                margin: const EdgeInsets.all(8.0),
+              return const Card(
+                margin: EdgeInsets.all(8.0),
                 child: ListTile(
                   // title: Text('Test on ${test['date']}'),
                   title: Text('Test on 22/2/2023'),
