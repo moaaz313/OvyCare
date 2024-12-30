@@ -107,7 +107,6 @@ class DoctorCard2 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 5.h,),
             Container(
               width: 110.w,
               height: 110.w,
