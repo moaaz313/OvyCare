@@ -11,7 +11,7 @@ class TestPCOSScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: CustomAppBar(title: "PCOS Test",useIconButton: true,backgroundColor: ColorStyle.pink,),
-      body: QuestionList(),
+      body: const QuestionList(),
     );
   }
 }

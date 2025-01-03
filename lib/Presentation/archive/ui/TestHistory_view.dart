@@ -5,6 +5,8 @@ import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
 import 'package:fl_chart/fl_chart.dart';
 
 class ArchivePage extends StatefulWidget {
+  const ArchivePage({super.key});
+
   @override
   _ArchivePageState createState() => _ArchivePageState();
 }
@@ -74,7 +76,7 @@ class _ArchivePageState extends State<ArchivePage> {
                   },
                   onChanged: _filterTests,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: const Icon(Icons.search),
                     hintText: "Search by date, result, or risk level",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -91,7 +93,7 @@ class _ArchivePageState extends State<ArchivePage> {
                   ),
                   child: LineChart(
                     LineChartData(
-                      titlesData: FlTitlesData(show: false),
+                      titlesData: const FlTitlesData(show: false),
                       borderData: FlBorderData(show: false),
                       minX: 0,
                       maxX: testHistory.length.toDouble() - 1,
@@ -120,7 +122,7 @@ class _ArchivePageState extends State<ArchivePage> {
                           color: Colors.blue,
                           belowBarData: BarAreaData(
                               show: true, color: Colors.blue.withOpacity(0.1)),
-                          dotData: FlDotData(show: true),
+                          dotData: const FlDotData(show: true),
                           showingIndicators: [0, 1, 2],
                           aboveBarData: BarAreaData(
                               show: true, color: Colors.blue.withOpacity(0.1)),
@@ -135,7 +137,7 @@ class _ArchivePageState extends State<ArchivePage> {
                             return touchedSpots.map((spot) {
                               return LineTooltipItem(
                                 "${testHistory[spot.x.toInt()]["date"]}: ${testHistory[spot.x.toInt()]["result"]} - ${testHistory[spot.x.toInt()]["risk"]}",
-                                TextStyle(color: Colors.black, fontSize: 14),
+                                const TextStyle(color: Colors.black, fontSize: 14),
                               );
                             }).toList();
                           },
@@ -156,13 +158,13 @@ class _ArchivePageState extends State<ArchivePage> {
                       return Card(
                         margin: const EdgeInsets.symmetric(vertical: 8.0),
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.calendar_today,
                             color: Colors.blue,
                           ),
                           title: Text(
                             test["date"]!,
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                            style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -180,7 +182,7 @@ class _ArchivePageState extends State<ArchivePage> {
                             onPressed: () {
                               // Navigate to detailed test view
                             },
-                            child: Text("View Details",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
+                            child: const Text("View Details",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
                           ),
                         ),
                       );
@@ -189,7 +191,7 @@ class _ArchivePageState extends State<ArchivePage> {
                       : Center(
                     child: Text(
                       "No results found for \"$searchQuery\".",
-                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                      style: const TextStyle(color: Colors.grey, fontSize: 16),
                     ),
                   ),
                 ),

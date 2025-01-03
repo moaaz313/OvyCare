@@ -37,7 +37,7 @@ class _FormAndButton extends State<FormAndButton> {
             //   hintText: 'Email',
             // ),
             SizedBox(height: 15.h),
-            CustomTextfromfield(hintText: 'Password', Controller: _email,isObscure: true,prefixIcon: const Padding(
+            CustomTextfromfield(hintText: 'Password', Controller: _pass,isObscure: true,prefixIcon: const Padding(
               padding: EdgeInsets.all(10.0),
               child: Icon(Icons.lock,color: ColorStyle.darkgray,size:30,
               ),
@@ -64,9 +64,8 @@ class _FormAndButton extends State<FormAndButton> {
               alignment: AlignmentDirectional.centerEnd,
               child: TextButton(
                   onPressed: () {},
-                  // ignore: prefer_const_constructors
-                  child: Text(
-                    'Forgot Password ?',style: const TextStyle(color: ColorStyle.purple,fontWeight: FontWeight.bold),
+                  child: const Text(
+                    'Forgot Password ?',style: TextStyle(color: ColorStyle.purple,fontWeight: FontWeight.bold),
                   )),
             ),
             // SizedBox(height:10.h),

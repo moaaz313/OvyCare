@@ -29,12 +29,9 @@ class HomepageView extends StatelessWidget {
               height: 15.h,
             ),
             const Footer(),
-            // DoctorScreen)()
           ],
         ),
       ),
     );
   }
 }
-
-

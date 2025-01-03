@@ -37,7 +37,7 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => HealthyView());
       case Routes.info:
         return MaterialPageRoute(builder: (context) => const InfoView());
-      case Routes.DocDetails:
+      case Routes.docDetails:
         return MaterialPageRoute(
             builder: (context) =>
                 DoctorDetailsScreen(doctor: settings.arguments as Doctor));
