@@ -27,7 +27,7 @@ Widget Calendar(context) {
                     // Offset in x and y direction
                   ),
                 ],
-                color: ColorStyle.darkpurple,
+                color: ColorStyle.purple,
                 borderRadius: BorderRadius.circular(15.r)),
             child: Row(children: [
               Container(

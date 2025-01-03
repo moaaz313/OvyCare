@@ -8,6 +8,7 @@ import 'package:ovacare/Presentation/doctor/ui/doctor_screen.dart';
 import 'package:stylish_bottom_bar/stylish_bottom_bar.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
+import '../../Presentation/Community/CommunityHomepage/ui/CommunityHomepage.dart';
 import '../../Presentation/Result Normal/ui/resultNormal_view.dart';
 import '../../Presentation/ResultAbnormal/ui/ResutlAbnormal_view.dart';
 
@@ -96,7 +97,7 @@ class _BottomNaiveBar extends State<BottomNaiveBar> {
             const HomepageView(),
             const TipsView(),
             // PCOSResultNormal(),
-            PCOSResultAbnormal(),
+            Communityhomepage(),
             const DoctorScreen(),
             SettingsView()
           ],

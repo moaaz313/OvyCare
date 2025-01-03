@@ -83,8 +83,7 @@ class _CycleLengthScreenState extends State<CycleLengthScreen> {
               name: "Continue",
             ),
             // Continue Button
-
-            SizedBox(height: 30),
+            SizedBox(height: 10.h,)
           ],
         ),
       ),

@@ -31,7 +31,7 @@ class _CycleLengthScreenState extends State<CycleLengthScreen> {
           children: [
             // Progress Bar
             LinearProgressIndicator(
-              value: 2 / 7, // Example: Step 6 of 7
+              value: 2 / 4, // Example: Step 6 of 7
               backgroundColor: Colors.grey.shade300,
               valueColor: AlwaysStoppedAnimation<Color>(Colors.pink),
             ),

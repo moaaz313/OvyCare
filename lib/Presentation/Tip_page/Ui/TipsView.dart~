@@ -252,7 +252,7 @@ Widget ExerciseTips() {
                       fontWeight: FontWeight.bold,
                       fontSize: 14.spMin),
                 ),
-                SizedBox(height: 5.h,),
+                SizedBox(height: 10.h,),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: ColorStyle.pink,
