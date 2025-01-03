@@ -8,6 +8,8 @@ import 'package:ovacare/Presentation/doctor/ui/doctor_screen.dart';
 import 'package:stylish_bottom_bar/stylish_bottom_bar.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
+import '../../Presentation/Result Normal/ui/resultNormal_view.dart';
+import '../../Presentation/ResultAbnormal/ui/ResutlAbnormal_view.dart';
 
 
 class  BottomNaiveBar extends StatefulWidget {
@@ -53,10 +55,10 @@ class _BottomNaiveBar extends State<BottomNaiveBar> {
             selectedColor: ColorStyle.pink,
           ),
           BottomBarItem(
-            icon: const Icon(FontAwesomeIcons.calendarDay, size: 24),
-            title: const Text('Calendar'),
+            icon:  Icon(FontAwesomeIcons.users, size: 24),
+            title: const Text('Community'),
             // backgroundColor: Colors.black,
-            selectedColor: ColorStyle.pink,
+            selectedColor: ColorStyle.pink
           ),
           BottomBarItem(
             icon: const Icon(
@@ -93,7 +95,8 @@ class _BottomNaiveBar extends State<BottomNaiveBar> {
           children:  [
             const HomepageView(),
             const TipsView(),
-            const EditProfileView(),
+            // PCOSResultNormal(),
+            PCOSResultAbnormal(),
             const DoctorScreen(),
             SettingsView()
           ],

@@ -1,0 +1,102 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovacare/Core/Widgets/custom_app_bar.dart';
+import 'package:ovacare/Core/themes/Colors/ColorsStyle.dart';
+import 'package:table_calendar/table_calendar.dart';
+
+import '../../../Core/Widgets/Custom_Button.dart';
+import 'CycleLogging_view.dart';
+import 'EditPeriod_view.dart';
+
+class CalenderSelectView extends StatefulWidget {
+  @override
+  _CalenderSelectView createState() =>
+      _CalenderSelectView();
+}
+
+class _CalenderSelectView extends State<CalenderSelectView> {
+  DateTime? selectedDate;
+  DateTime focusedDay = DateTime.now();
+  List<DateTime> selectedDays = [];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: CustomAppBar(
+        useIconButton: true,
+        title: 'Edit Period',
+        backgroundColor: ColorStyle.pink,
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'When did your last period start?',
+              style: TextStyle(fontSize: 22.spMin,fontWeight: FontWeight.bold),
+            ),
+          ),
+          TableCalendar(
+            firstDay: DateTime.utc(2020, 1, 1),
+            lastDay: DateTime.utc(2100, 12, 31),
+            focusedDay: focusedDay,
+            calendarFormat: CalendarFormat.month,
+            headerStyle: HeaderStyle(
+              titleCentered: true,
+              formatButtonVisible: false,
+              titleTextStyle: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+            ),
+            calendarStyle: CalendarStyle(
+              todayDecoration: BoxDecoration(
+                color: Colors.pink.shade200,
+                shape: BoxShape.circle,
+              ),
+              selectedDecoration: BoxDecoration(
+                color: Colors.pink,
+                shape: BoxShape.circle,
+              ),
+              defaultDecoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.grey.shade400),
+              ),
+              weekendDecoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.grey.shade400),
+              ),
+              outsideDecoration: BoxDecoration(shape: BoxShape.circle),
+            ),
+            selectedDayPredicate: (day) => selectedDays.contains(day),
+            onDaySelected: (selectedDay, focusedDay) {
+              setState(() {
+                this.focusedDay = focusedDay;
+                if (selectedDays.contains(selectedDay)) {
+                  selectedDays.remove(selectedDay);
+                } else {
+                  selectedDays.add(selectedDay);
+                }
+              });
+            },
+          ),     // SizedBox(height: 20),
+
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child:CustomButton(
+              ontap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute
+                      builder: (context) => CycleLengthScreen()),
+                );
+              },
+              width: double.infinity,
+              height: 50.h,
+              fontSize: 18.spMin,
+              name: "Finish",
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

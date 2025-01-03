@@ -13,15 +13,15 @@ Widget Body(context) {
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
         alignment: Alignment.centerRight,
         decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.9), // Shadow color with opacity
-                spreadRadius: 5, // Spread radius
-                blurRadius: 5, // Blur radius
-                offset: const Offset(-2, 7),
-                // Offset in x and y direction
-              ),
-            ],
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: Colors.grey.withOpacity(0.9), // Shadow color with opacity
+            //     spreadRadius: 5, // Spread radius
+            //     blurRadius: 10, // Blur radius
+            //     offset: const Offset(-2, 7),
+            //     // Offset in x and y direction
+            //   ),
+            // ],
             color: ColorStyle.white,
             image: const DecorationImage(
                 image: AssetImage(
@@ -74,15 +74,15 @@ Widget Body(context) {
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
         alignment: Alignment.centerRight,
         decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.9), // Shadow color with opacity
-                spreadRadius: 5, // Spread radius
-                blurRadius: 5, // Blur radius
-                offset: const Offset(-2, 7),
-                // Offset in x and y direction
-              ),
-            ],
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: Colors.grey.withOpacity(0.9), // Shadow color with opacity
+            //     spreadRadius: 5, // Spread radius
+            //     blurRadius: 5, // Blur radius
+            //     offset: const Offset(-2, 7),
+            //     // Offset in x and y direction
+            //   ),
+            // ],
             color: ColorStyle.white,
             image: const DecorationImage(
                 image: AssetImage(
