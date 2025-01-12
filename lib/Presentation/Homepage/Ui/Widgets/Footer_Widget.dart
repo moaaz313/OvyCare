@@ -96,7 +96,7 @@ class DoctorCard2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, Routes.DocDetails, arguments: doctor);
+        Navigator.pushNamed(context, Routes.docDetails, arguments: doctor);
       },
       child: Container(
         decoration: BoxDecoration(

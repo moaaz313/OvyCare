@@ -21,16 +21,15 @@ class Question extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-       Text(
+        Text(
           "$questionNumber: $questionText",
-          style:  TextStyle(fontSize: 16.spMin, fontWeight: FontWeight.w600),
+          style: TextStyle(fontSize: 16.spMin, fontWeight: FontWeight.w600),
         ),
         Row(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // const Spacer(),
-            SizedBox(width: 50.w,),
+            SizedBox(
+              width: 50.w,
+            ),
             Expanded(
               child: RadioListTile<String>(
                 title: const Text('Yes'),
@@ -51,7 +50,6 @@ class Question extends StatelessWidget {
             ),
           ],
         ),
-        // Divider(color: Colors.grey.shade300),
       ],
     );
   }
