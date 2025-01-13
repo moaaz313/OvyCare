@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../Core/Widgets/Custom_Button.dart';
 import '../../../Core/Widgets/custom_app_bar.dart';
 import '../../../Core/themes/Colors/ColorsStyle.dart';
-import 'CycleLength_view.dart';
+import 'CycleLength_view2.dart';
 
 class PeriodLengthScreen extends StatefulWidget {
   @override

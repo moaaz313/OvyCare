@@ -43,8 +43,8 @@ class SearchDoctorBar extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 8.w),
-            // Spacer(),
+            // SizedBox(width: 8.w),
+            Spacer(),
             // Spacing between the search bar and dropdown
             Container(
               // width: 100.w,

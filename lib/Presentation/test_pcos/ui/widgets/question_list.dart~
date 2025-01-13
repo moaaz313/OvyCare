@@ -80,7 +80,7 @@ class _QuestionListState extends State<QuestionList> {
                 icon: CircleAvatar(
                   radius: 30.r,
                   backgroundColor: Colors.white,
-                  child: Icon(Icons.arrow_forward, color: Colors.pink),
+                  child: Icon(Icons.arrow_forward, color: ColorStyle.pink),
                 ),
               ),
             ],

@@ -307,7 +307,7 @@ Widget Cycle() {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // _buildWeekSelector(),
-        const SizedBox(height: 16),
+        // const SizedBox(height: 16),
         _buildCycleHistorySection(
           title: "Current Cycle: Started 25 Dec (19 days)",
           subtitle: "5-day period",

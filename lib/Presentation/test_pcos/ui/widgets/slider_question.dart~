@@ -34,7 +34,7 @@ class SliderQuestion extends StatelessWidget {
               Text(
                 initialValue.toInt().toString(),
                 style:  TextStyle(
-                  fontSize: 16.spMin,
+                  fontSize: 18.spMin,
                   fontWeight: FontWeight.bold,
                   color: Colors.pink,
                 ),

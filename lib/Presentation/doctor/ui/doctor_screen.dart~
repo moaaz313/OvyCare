@@ -99,7 +99,8 @@ class _DoctorScreenState extends State<DoctorScreen> {
               },
             ),
             SizedBox(
-                height: 15.h), // Add more spacing between the search bar and the doctor list
+                height: 15
+                    .h), // Add more spacing between the search bar and the doctor list
             Expanded(
               child: DoctorList(
                 doctors: filteredDoctors,

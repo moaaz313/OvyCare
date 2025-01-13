@@ -26,7 +26,7 @@ class _CycleTrackStartScreenState extends State<CycleTrackStartScreen>
       vsync: this,
       duration: Duration(milliseconds: 500),
     );
-    Future.delayed(Duration(milliseconds: 200), () {
+    Future.delayed(Duration(milliseconds: 500), () {
       setState(() {
         _trackingStarted = !_trackingStarted;
       });

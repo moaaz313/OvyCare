@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../Core/themes/Colors/ColorsStyle.dart';
-import '../../../Calendar/ui/CycleLogging_view.dart';
-import '../../../Calendar/ui/CalenderSelectView.dart';
-import '../../../Calendar/ui/PeriodDuration_view.dart';
-import '../../../Calendar/ui/PeriodLength_view1.dart';
+import '../../../Calendar/ui/CycleHighlight_view.dart';
+import '../../../Calendar/ui/WelcomeCalendar.dart';
 
 Widget Calendar(context) {
   return InkWell(
     onTap: () {
-      Navigator.of(context).push(MaterialPageRoute(builder: (context) => PeriodLengthScreen(),));
+      // Navigator.of(context).push(MaterialPageRoute(builder: (context) => PeriodLengthScreen(),));
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => CycleTrackStartScreen(),));
     },
     child: Stack(
       children: [
@@ -38,28 +37,34 @@ Widget Calendar(context) {
                     SizedBox(
                       height: 20.h,
                     ),
-                    const Text(
-                      "Period in.",
+                     Text(
+                      "Period in 4 Days.",
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 16),
+                          fontSize: 18.spMin),
                     ),
-                    Text(
-                      "4 Day",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 40.spMin),
+                    SizedBox(
+                      height: 5.h,
                     ),
-                    const Spacer(),
+                    // Text(
+                    //   "4 Day",
+                    //   style: TextStyle(
+                    //       color: Colors.white,
+                    //       fontWeight: FontWeight.bold,
+                    //       fontSize: 40.spMin),
+                    // ),
+                    //
                     Text(
                       'Stay prepared and plan ahead!',
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w500,
                           fontSize: 13.sp),
-                    ),
+                    ),const Spacer(),
+                    ElevatedButton(onPressed: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => CycleHighlightsScreen(),));
+                    }, child: Text("Period logs")),
                     SizedBox(
                       height: 10.h,
                     ),

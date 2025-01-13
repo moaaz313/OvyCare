@@ -19,7 +19,7 @@ class _CycleLengthScreenState extends State<CycleLengthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-          title: 'Cycle Track',
+          title: 'Cycle Tracking',
           useIconButton: true,
           backgroundColor: ColorStyle.pink),
       body: Padding(
@@ -83,8 +83,7 @@ class _CycleLengthScreenState extends State<CycleLengthScreen> {
               name: "Continue",
             ),
             // Continue Button
-
-            SizedBox(height: 30),
+            SizedBox(height: 10.h,)
           ],
         ),
       ),

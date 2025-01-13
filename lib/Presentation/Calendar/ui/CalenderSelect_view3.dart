@@ -6,7 +6,7 @@ import 'package:ovacare/Presentation/Calendar/ui/LoadingScreen.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 import '../../../Core/Widgets/Custom_Button.dart';
-import 'CycleLength_view.dart';
+import 'CycleLength_view2.dart';
 import 'CycleLogging_view.dart';
 import 'EditPeriod_view.dart';
 

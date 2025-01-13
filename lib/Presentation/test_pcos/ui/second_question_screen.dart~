@@ -117,7 +117,7 @@ class _SecondQuestionScreenState extends State<SecondQuestionScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(onPressed: (){
                       Navigator.of(context).push(MaterialPageRoute(builder: (context) =>PCOSResultNormal() ,));
                     }, child:Text('Get Result')
