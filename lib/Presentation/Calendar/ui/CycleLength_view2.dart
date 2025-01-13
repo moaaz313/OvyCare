@@ -19,7 +19,7 @@ class _CycleLengthScreenState extends State<CycleLengthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-          title: 'Cycle Track',
+          title: 'Cycle Tracking',
           useIconButton: true,
           backgroundColor: ColorStyle.pink),
       body: Padding(
